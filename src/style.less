@@ -1,0 +1,76 @@
+/** @format */
+
+@import url('./assets/less/config');
+@import url('./assets/less/font');
+@import url('./assets/less/icon');
+
+header {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-bottom: 0.3px solid rgba(100, 100, 100, 0.3);
+    animation-delay: 2s;
+    .hd-name {
+        width: 65%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        margin-left: 20px;
+        font-weight: 700;
+        font-size: 20px;
+        span {
+            cursor: help;
+        }
+        b {
+            color: aqua;
+        }
+    }
+    .ic-menu {
+        width: 35%;
+        height: 100%;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        span {
+            width: 25%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            i {
+                padding: 10px;
+                &:hover {
+                    color: aqua;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+// Tablet
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    header {
+        .hd-name {
+            width: 70%;
+        }
+        .ic-menu {
+            width: 30%;
+        }
+    }
+}
+
+// Smartphone
+@media only screen and (max-width: 767px) {
+    header {
+        .hd-name {
+            width: 60%;
+        }
+        .ic-menu {
+            width: 40%;
+        }
+    }
+}
