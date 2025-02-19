@@ -1,12 +1,14 @@
-# Welcome to My `/home` Directory
+## Welcome to My `$HOME` Directory
 
-Interestingly I am...
+#### Did you know? Interestingly, I am...
 
-- 🐧 **Tux**'s big fan,
-- ❄️ OS users with the largest number of packages in the repository: **NixOS**,
-- 💻 Future **Software Engineer**,
-- 🤖 Future **Artificial Intelligence Engineer**,
-- 🎓 **Computer Science** Student, and
-- ✨ Creative thinker and problem solver who loves creating **Free and Open-Source Software (FOSS)**.
+- 🐧 Big fan of Tux
+- ✨ Creative thinker and problem solver who loves developing Free and Open-Source Software (FOSS)
+- ❄️ NixOS user—the Linux distribution with the largest package repository
+- 💻 Future Software Engineer
+- 🤖 Future Artificial Intelligence Engineer
+- 🎓 Computer Science student
 
-Visit my `/etc/os-release` at [https://gravatar.com/farhnkrnapratma](https://gravatar.com/farhnkrnapratma)
+#### My Tech Stack
+
+`Rust` `Python` `Java` `Golang` `PostgreSQL` `SurrealDB` `OpenSSH` `Bash` `Linux` `NixOS` `Arch` `EndeavourOS` `Debian` `Fedora` `OpenSUSE Tumbleweed` `Tails` `GNOME` `KDE Plasma` `Wayland` `Nix` `Git` `GitHub` `Poetry` `Gradle` `Cargo` `IntelliJ IDEA` `RustRover` `PyCharm` `Visual Studio Code` `Helix` `Vim` `Tmux` `Kitty` `Firefox` `Tor Browser` `Google Chrome`
