@@ -1,4 +1,4 @@
-## Welcome to My `$HOME` Directory
+## Welcome to My **`$HOME`** Directory
 
 #### Did you know? Interestingly, I am...
 
@@ -11,8 +11,8 @@
 
 #### My Tech Stack
 
-`Rust` `Python` `Java` `Golang` `PostgreSQL` `SurrealDB` `OpenSSH` `Bash` `Linux` `NixOS` `Arch` `EndeavourOS` `Debian` `Fedora` `OpenSUSE Tumbleweed` `Tails` `GNOME` `KDE Plasma` `Wayland` `Nix` `Git` `GitHub` `Poetry` `Gradle` `Cargo` `IntelliJ IDEA` `RustRover` `PyCharm` `Visual Studio Code` `Helix` `Vim` `Tmux` `Kitty` `Firefox` `Tor Browser` `Google Chrome`
+**`Rust`** **`Python`** **`Java`** **`Golang`** **`PostgreSQL`** **`SurrealDB`** **`OpenSSH`** **`Bash`** **`Linux`** **`NixOS`** **`Arch`** **`EndeavourOS`** **`Debian`** **`Fedora`** **`OpenSUSE`** **`GNOME`** **`KDE`** **`Wayland`** **`Nix`** **`Git`** **`GitHub`** **`Poetry`** **`Gradle`** **`Cargo`** **`IntelliJ IDEA`** **`RustRover`** **`PyCharm`** **`Visual Studio Code`** **`Helix`** **`Vim`** **`Tmux`** **`Kitty`**
 
 ---
 
-To `cd` into my `/etc/profile`, visit [`/etc/profile/Gravatar`](https://gravatar.com/farhnkrnapratma)
+To **`cd`** into my **`/etc/profile`**, visit [**`/etc/profile/Gravatar`**](https://gravatar.com/farhnkrnapratma)
