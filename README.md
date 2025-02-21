@@ -9,10 +9,6 @@
 - 🤖 Future Artificial Intelligence Engineer
 - 🎓 Computer Science student
 
-#### My Tech Stack
-
-**`Rust`** **`Python`** **`Java`** **`Golang`** **`PostgreSQL`** **`SurrealDB`** **`OpenSSH`** **`Bash`** **`Linux`** **`NixOS`** **`Arch`** **`EndeavourOS`** **`Debian`** **`Fedora`** **`OpenSUSE`** **`GNOME`** **`KDE`** **`Wayland`** **`Nix`** **`Git`** **`GitHub`** **`Poetry`** **`Gradle`** **`Cargo`** **`IntelliJ IDEA`** **`RustRover`** **`PyCharm`** **`Visual Studio Code`** **`Helix`** **`Vim`** **`Tmux`** **`Kitty`**
-
 ---
 
 To **`cd`** into my **`/etc/profile`**, visit [**`/etc/profile/Gravatar`**](https://gravatar.com/farhnkrnapratma)
