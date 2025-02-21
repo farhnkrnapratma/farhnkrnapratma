@@ -4,10 +4,7 @@
 
 - 🐧 Big fan of Tux
 - ✨ Creative thinker and problem solver who loves developing Free and Open-Source Software (FOSS)
-- ❄️ NixOS user—the Linux distribution with the largest package repository
 - 💻 Future Software Engineer
-- 🤖 Future Artificial Intelligence Engineer
-- 🎓 Computer Science student
 
 ---
 
