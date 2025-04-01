@@ -4,7 +4,8 @@
 
 - 🐧 Big fan of Tux
 - ✨ Creative thinker and problem solver who loves developing Free and Open-Source Software (FOSS)
-- 💻 Future Software Engineer
+- 💻 Future System Programmer (Rust is preferred)
+- 🛡️ Future Cyber Security Engineer
 
 ---
 
