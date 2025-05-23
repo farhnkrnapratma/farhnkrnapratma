@@ -1,30 +1,24 @@
-<script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-</script>
-
 <template>
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
-  </div>
-  <HelloWorld msg="Vite + Vue" />
+    <div
+        class="w-full flex gap-x-4 bg-white p-6 shadow-lg outline outline-black/5 dark:bg-slate-800 dark:shadow-none dark:-outline-offset-1 dark:outline-white/10"
+    >
+        <img
+            class="size-15 shrink-0 rounded-full"
+            src="./assets/profile.png"
+            alt="Profile Logo"
+        />
+        <div>
+            <div
+                class="cursor-pointer text-xl font-medium text-black dark:text-white"
+            >
+                <a href="https://farhankurniapratama.my.id"
+                    >Farhan Kurnia Pratama</a
+                >
+            </div>
+            <p class="text-gray-500 dark:text-gray-400">
+                ✨ Creative thinker and problem solver who loves creating free
+                and open-source software (FOSS).
+            </p>
+        </div>
+    </div>
 </template>
-
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
-</style>
