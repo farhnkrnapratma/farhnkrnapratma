@@ -1,2 +1,72 @@
 @import "tailwindcss";
 @import "bootstrap-icons/font/bootstrap-icons";
+
+@theme {
+    --color-rosewater: #f4dbd6;
+    --color-flamingo: #f0c6c6;
+    --color-pink: #f5bde6;
+    --color-mauve: #c6a0f6;
+    --color-red: #ed8796;
+    --color-maroon: #ee99a0;
+    --color-peach: #f5a97f;
+    --color-yellow: #eed49f;
+    --color-green: #a6da95;
+    --color-teal: #8bd5ca;
+    --color-sky: #91d7e3;
+    --color-sapphire: #7dc4e4;
+    --color-blue: #8aadf4;
+    --color-lavender: #b7bdf8;
+    --color-text: #cad3f5;
+    --color-subtext1: #b8c0e0;
+    --color-subtext0: #a5adcb;
+    --color-overlay2: #939ab7;
+    --color-overlay1: #8087a2;
+    --color-overlay0: #6e738d;
+    --color-surface2: #5b6078;
+    --color-surface1: #494d64;
+    --color-surface0: #363a4f;
+    --color-base: #24273a;
+    --color-mantle: #1e2030;
+    --color-crust: #181926;
+}
+body {
+    @apply select-none;
+    font-family: "Fira Code", monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.hlist > li {
+    @apply text-teal
+    text-xl
+    p-2
+    m-4
+    rounded-md
+    cursor-pointer;
+}
+
+.hlist > li:hover,
+.hlist > li:focus {
+    @apply bg-surface1;
+}
+
+.mlist > li {
+    @apply text-text
+    text-xl
+    p-2
+    m-2
+    rounded-md
+    cursor-pointer;
+}
+
+.mlist > li > i {
+    @apply text-xl
+    mr-3
+    ml-3;
+}
+
+.mlist > li:hover,
+.mlist > li:focus {
+    @apply text-teal
+    bg-surface1;
+}
