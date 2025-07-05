@@ -2,33 +2,38 @@
 @import "bootstrap-icons/font/bootstrap-icons";
 
 @theme {
-    --color-rosewater: #f4dbd6;
-    --color-flamingo: #f0c6c6;
-    --color-pink: #f5bde6;
-    --color-mauve: #c6a0f6;
-    --color-red: #ed8796;
-    --color-maroon: #ee99a0;
-    --color-peach: #f5a97f;
-    --color-yellow: #eed49f;
-    --color-green: #a6da95;
-    --color-teal: #8bd5ca;
-    --color-sky: #91d7e3;
-    --color-sapphire: #7dc4e4;
-    --color-blue: #8aadf4;
-    --color-lavender: #b7bdf8;
-    --color-text: #cad3f5;
-    --color-subtext1: #b8c0e0;
-    --color-subtext0: #a5adcb;
-    --color-overlay2: #939ab7;
-    --color-overlay1: #8087a2;
-    --color-overlay0: #6e738d;
-    --color-surface2: #5b6078;
-    --color-surface1: #494d64;
-    --color-surface0: #363a4f;
-    --color-base: #24273a;
-    --color-mantle: #1e2030;
-    --color-crust: #181926;
+    --color-bg: #282828;
+    --color-bg0: #282828;
+    --color-bg0_h: #1d2021;
+    --color-bg0_s: #32302f;
+    --color-bg1: #3c3836;
+    --color-bg2: #504945;
+    --color-bg3: #665c54;
+    --color-bg4: #7c6f64;
+    --color-fg: #ebdbb2;
+    --color-fg0: #fbf1c7;
+    --color-fg1: #ebdbb2;
+    --color-fg2: #d5c4a1;
+    --color-fg3: #bdae93;
+    --color-fg4: #a89984;
+    --color-gray1: #a89984;
+    --color-gray2: #928374;
+    --color-red1: #cc241d;
+    --color-red2: #fb4934;
+    --color-green1: #98971a;
+    --color-green2: #b8bb26;
+    --color-yellow1: #d79921;
+    --color-yellow2: #fabd2f;
+    --color-blue1: #458588;
+    --color-blue2: #83a598;
+    --color-purple1: #b16286;
+    --color-purple2: #d3869b;
+    --color-aqua1: #689d6a;
+    --color-aqua2: #8ec07c;
+    --color-orange1: #d65d0e;
+    --color-orange2: #fe8019;
 }
+
 body {
     @apply select-none;
     font-family: "Fira Code", monospace;
@@ -37,25 +42,25 @@ body {
 }
 
 .hlist > li {
-    @apply text-teal
+    @apply text-fg1
     text-xl
     p-2
-    m-4
-    rounded-md
+    m-2
+    rounded-full
     cursor-pointer;
 }
 
 .hlist > li:hover,
 .hlist > li:focus {
-    @apply bg-surface1;
+    @apply bg-bg2;
 }
 
 .mlist > li {
-    @apply text-text
+    @apply text-fg1
     text-xl
     p-2
     m-2
-    rounded-md
+    rounded-full
     cursor-pointer;
 }
 
@@ -67,6 +72,6 @@ body {
 
 .mlist > li:hover,
 .mlist > li:focus {
-    @apply text-teal
-    bg-surface1;
+    @apply text-yellow1
+    bg-bg2;
 }
