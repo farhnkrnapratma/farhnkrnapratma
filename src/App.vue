@@ -51,15 +51,21 @@
                     <li tabindex="0"><i class="bi bi-share"></i>Public</li>
                     <li tabindex="0"><i class="bi bi-copy"></i>Templates</li>
                     <li tabindex="0"><i class="bi bi-play-btn"></i>Videos</li>
-                    <hr
-                        class="rounded-md h-[1px] bg-bg2 border-none m-3 ml-6 mr-6"
-                    />
+                    <hr />
                     <li tabindex="0"><i class="bi bi-trash"></i>Trash</li>
-                    <hr
-                        class="rounded-md h-[1px] bg-bg2 border-none m-3 ml-6 mr-6"
-                    />
+                    <hr />
                     <li tabindex="0">
                         <i class="bi bi-globe-americas"></i>Networks
+                    </li>
+                    <hr />
+                    <li tabindex="0">
+                        <i class="bi bi-device-ssd"></i>105 GB Volume
+                    </li>
+                    <li tabindex="0">
+                        <i class="bi bi-device-ssd"></i>511 GB Volume
+                    </li>
+                    <li tabindex="0">
+                        <i class="bi bi-device-ssd"></i>152 GB Volume
                     </li>
                 </ul>
             </div>

@@ -40,9 +40,18 @@ body {
     font-optical-sizing: auto;
     font-style: normal;
 }
+hr {
+    @apply rounded-md
+    h-[1px]
+    bg-bg2
+    border-none
+    m-3
+    ml-6
+    mr-6;
+}
 
 .hlist > li {
-    @apply text-fg1
+    @apply text-aqua2
     text-xl
     p-2
     m-2
@@ -72,6 +81,6 @@ body {
 
 .mlist > li:hover,
 .mlist > li:focus {
-    @apply text-yellow1
+    @apply text-aqua2
     bg-bg2;
 }
