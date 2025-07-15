@@ -1,4 +1,4 @@
-## My **`~/`** Directory
+## Welcome to My **`$HOME`**
 
 A tech enthusiast who loves exploring innovative solutions and diving into diverse areas of computing:
 
