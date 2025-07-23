@@ -1,13 +1,16 @@
 ## Welcome to My **`$HOME`**
 
-A tech enthusiast who loves exploring innovative solutions and diving into diverse areas of computing:
+I'm a tech enthusiast with interests in:
 
-- 🐧 **Linux Enthusiast:** Passionate about the Linux ecosystem and community.  
-- ✨ **Creative Problem Solver:** Constantly exploring inventive ways to overcome challenges.  
-- 🆓 **FOSS Advocate:** Enjoys developing and contributing to Free and Open-Source Software.  
-- 💻 **System Programmer & Software Engineer:** Keen on building and improving software systems.  
-- 🛡️ **Cybersecurity Buff:** Interested in enhancing digital security and protecting data.
+- 🐧 **Linux User:** Actively explores and uses Linux systems.  
+- 🆓 **FOSS Supporter:** Enjoys creating and contributing to open-source projects.  
+- 💻 **Software Engineer:** Builds and improves software systems.  
+- 🛡️ **Cybersecurity Enthusiast:** Interested in protecting data and digital privacy.
 
----
+### My #RoadCard
 
-Navigate to [**`/etc/profile/Gravatar`**](https://gravatar.com/farhnkrnapratma)
+[![roadmap.sh](https://roadmap.sh/card/wide/6682c21ad270cc49a6aaeac9?variant=dark)](https://roadmap.sh)
+
+### Anything else?
+
+Navigate to [**`/etc/profile`**](https://gravatar.com/farhnkrnapratma)
