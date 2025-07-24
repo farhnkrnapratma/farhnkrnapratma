@@ -5,23 +5,19 @@
 ![GitHub sponsors](https://img.shields.io/github/sponsors/farhnkrnapratma?style=for-the-badge&logo=github-sponsors&logoColor=%23cdd6f4&label=sponsors&labelColor=%2345475a&color=%2374c7ec)
 ![Open Collective](https://img.shields.io/opencollective/sponsors/farhnkrnapratma?style=for-the-badge&logo=opencollective&logoColor=%23cdd6f4&label=open%20collective&labelColor=%2345475a&color=%2374c7ec)
 ![Matrix](https://img.shields.io/matrix/farhnkrnapratma%3Amatrix.org?style=for-the-badge&logo=element&logoColor=%23cdd6f4&label=matrix&labelColor=%2345475a&color=%2374c7ec)
-![GitHub commit activity](https://img.shields.io/github/commit-activity/w/farhnkrnapratma/dconfsync?style=for-the-badge&logo=github&logoColor=%23cdd6f4&label=dconfsync&labelColor=%2345475a&color=%2374c7ec)
 
+![Acrh Linux with COSMIC](./arch_cosmic.png)
+---
 ```toml
-[life]
-is_simple = true
-really = false
-
 [desktop]
-distro = "Arch Linux"
+os = "Arch Linux"
 kernel = "CachyOS"
 shell = "Nushell"
-terminal = ["Wezterm", "Warp"]
-font = "Fira Code"
-code_editor = "Neovim"
-preferred_language = ["Rust", "Python", "Go", "TypeScript"]
+terminal = "Wezterm"
 desktop_environment = "COSMIC"
-display_server_protocol = "Wayland"
+code_editor = "Neovim"
+font = "JetBrains Mono"
+language = ["Rust", "Python", "Go", "TypeScript"]
 browser = ["Chrome", "Zen"]
 color_scheme = "Catppuccin Mocha"
 
@@ -30,18 +26,17 @@ email = ["farhnkrnapratma@gmail.com", "farhnkrnapratma@protonmail.com"]
 matrix = "@farhnkrnapratma:matrix.org"
 irc = "farhnkrnapratma"
 ```
-
-
+---
 I'm a tech enthusiast with interests in:
 
 * 🐧 **Linux & FOSS** – Passionate about exploring Linux distributions and contributing to open-source projects.
 * 💻 **Software Engineering** – Builds and improves system-level software.
 * 🛡️ **Cyber Security** – Focused on data protection and digital privacy.
-
+---
 ### My #RoadCard
 
 [![roadmap.sh](https://roadmap.sh/card/wide/6682c21ad270cc49a6aaeac9?variant=dark)](https://roadmap.sh)
-
+---
 ### Anything else?
 
 Navigate to [**`/etc/profile`**](https://gravatar.com/farhnkrnapratma)
