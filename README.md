@@ -1,11 +1,12 @@
 ## Welcome to My **`$HOME`**
 
+`🐧 Linux & FOSS` · `💻 System Software` · `🛡️ Cyber Security`
+
 I'm a tech enthusiast with interests in:
 
-- 🐧 **Linux User:** Actively explores and uses Linux systems.  
-- 🆓 **FOSS Supporter:** Enjoys creating and contributing to open-source projects.  
-- 💻 **Software Engineer:** Builds and improves software systems.  
-- 🛡️ **Cybersecurity Enthusiast:** Interested in protecting data and digital privacy.
+* 🐧 **Linux & FOSS** – Passionate about exploring Linux distributions and contributing to open-source projects.
+* 💻 **Software Engineering** – Builds and improves system-level software.
+* 🛡️ **Cyber Security** – Focused on data protection and digital privacy.
 
 ### My #RoadCard
 
