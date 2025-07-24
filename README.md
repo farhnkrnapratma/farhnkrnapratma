@@ -8,23 +8,27 @@
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/w/farhnkrnapratma/dconfsync?style=for-the-badge&logo=github&logoColor=%23cdd6f4&label=dconfsync&labelColor=%2345475a&color=%2374c7ec)
 
 ```toml
-# Don't be like me.
-
 [life]
 is_simple = true
 really = false
 
-[my_setup]
-distro = "Arch Linux" # I Use Arch BTW
+[desktop]
+distro = "Arch Linux"
 kernel = "CachyOS"
-shell = "Nushell" # https://nushell.sh
+shell = "Nushell"
 terminal = ["Wezterm", "Warp"]
-font = "Fira Code" # $ pacman -S extra/ttf-firacode-nerd
+font = "Fira Code"
 code_editor = "Neovim"
-preferred_language = ["Rust", "Python", "Go", "TypeScript"] # I ♥️ 🦀
-desktop_environment = ["COSMIC", "GNOME"] # Wayland only
-browser = ["Chrome", "Zen", "qutebrowser"]
-color_scheme = "Catppuccin Mocha" # Everywhere
+preferred_language = ["Rust", "Python", "Go", "TypeScript"]
+desktop_environment = "COSMIC"
+display_server_protocol = "Wayland"
+browser = ["Chrome", "Zen"]
+color_scheme = "Catppuccin Mocha"
+
+[contact]
+email = ["farhnkrnapratma@gmail.com", "farhnkrnapratma@protonmail.com"]
+matrix = "@farhnkrnapratma:matrix.org"
+irc = "farhnkrnapratma"
 ```
 
 
