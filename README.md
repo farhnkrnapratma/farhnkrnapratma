@@ -9,7 +9,7 @@ I'm a tech enthusiast with interests in:
 
 ### My #RoadCard
 
-[![roadmap.sh](https://roadmap.sh/card/wide/6682c21ad270cc49a6aaeac9?variant=dark)](https://roadmap.sh)
+[![roadmap.sh](https://roadmap.sh/card/tall/6682c21ad270cc49a6aaeac9?variant=dark)](https://roadmap.sh)
 
 ### Anything else?
 
