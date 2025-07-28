@@ -1,7 +1,7 @@
 <template>
     <div class="w-full h-full absolute top-0 left-0 p-3 bg-bg">
         <div
-            class="w-full h-full border border-bg2 rounded-lg grid [grid-template-columns:15%_85%] [grid-template-rows:4%_96%] p-3 bg-bg whitespace-nowrap"
+            class="w-full h-full border border-bg2 rounded-lg grid [grid-template-columns:15%_85%] [grid-template-rows:4%_96%] p-2 bg-bg whitespace-nowrap"
         >
             <div
                 class="col-span-full bg-bg rounded-sm grid grid-cols-2 grid-rows-1"
