@@ -19,7 +19,7 @@ code_editor = "Neovim"
 font = "JetBrains Mono"
 language = ["Rust", "Python", "Go", "TypeScript"]
 browser = ["Chrome", "Zen"]
-color_scheme = "Catppuccin Mocha"
+color_scheme = "Gruvbox Dark"
 
 [contact]
 email = ["farhnkrnapratma@gmail.com", "farhnkrnapratma@protonmail.com"]
