@@ -11,8 +11,8 @@
 
 ```toml
 [desktop]
-os = "Arch Linux"
-kernel = "CachyOS"
+os = "Arch Linux x86_64"
+kernel = "Linux CachyOS"
 shell = "Nushell"
 terminal = "Wezterm"
 desktop_environment = "COSMIC"
@@ -40,6 +40,9 @@ I'm a tech enthusiast with interests in:
 ### My #RoadCard
 
 [![roadmap.sh](https://roadmap.sh/card/wide/6682c21ad270cc49a6aaeac9?variant=dark)](https://roadmap.sh)
+
+> View my profile on [`roadmap.sh`](https://roadmap.sh/u/farhnkrnapratma)
+
 ---
 
 <picture>
@@ -47,6 +50,10 @@ I'm a tech enthusiast with interests in:
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/farhnkrnapratma/farhnkrnapratma/output/pacman-contribution-graph.svg">
   <img alt="pacman contribution graph" src="https://raw.githubusercontent.com/farhnkrnapratma/farhnkrnapratma/output/pacman-contribution-graph.svg">
 </picture>
+
+> 👆 Do you want that too? Go to this [`website.`](https://profile-readme-generator.com/)
+
+---
 
 ### Anything else?
 
