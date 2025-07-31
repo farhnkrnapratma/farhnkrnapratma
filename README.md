@@ -6,21 +6,19 @@
 ![Open Collective](https://img.shields.io/opencollective/sponsors/farhnkrnapratma?style=for-the-badge&logo=opencollective&logoColor=%23cdd6f4&label=open%20collective&labelColor=%2345475a&color=%2374c7ec)
 ![Matrix](https://img.shields.io/matrix/farhnkrnapratma%3Amatrix.org?style=for-the-badge&logo=element&logoColor=%23cdd6f4&label=matrix&labelColor=%2345475a&color=%2374c7ec)
 
-![Acrh Linux with COSMIC](./arch_cosmic.png)
 ---
 
 ```toml
-[desktop]
-os = "Arch Linux x86_64"
-kernel = "Linux CachyOS"
+[setup]
+os = "Arch Linux"
+kernel = "CachyOS"
 shell = "Nushell"
 terminal = "Wezterm"
-desktop_environment = "COSMIC"
-code_editor = "Neovim"
+desktop = "COSMIC"
+editor = "Neovim"
 font = "JetBrains Mono"
-language = ["Rust", "Python", "Go", "TypeScript"]
+language = ["Rust", "Python"]
 browser = ["Chrome", "Zen"]
-color_scheme = "Gruvbox Dark"
 
 [contact]
 email = ["farhnkrnapratma@gmail.com", "farhnkrnapratma@protonmail.com"]
@@ -34,6 +32,7 @@ I'm a tech enthusiast with interests in:
 * 🐧 **Linux & FOSS** – Passionate about exploring Linux distributions and contributing to open-source projects.
 * 💻 **Software Engineering** – Builds and improves system-level software.
 * 🛡️ **Cyber Security** – Focused on data protection and digital privacy.
+* 🪙 **Cryptocurrency** – Interested in blockchain technology, decentralized finance (DeFi), and privacy-focused crypto assets.
 
 ---
 
@@ -50,8 +49,6 @@ I'm a tech enthusiast with interests in:
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/farhnkrnapratma/farhnkrnapratma/output/pacman-contribution-graph.svg">
   <img alt="pacman contribution graph" src="https://raw.githubusercontent.com/farhnkrnapratma/farhnkrnapratma/output/pacman-contribution-graph.svg">
 </picture>
-
-> 👆 Do you want that too? Go to this [`website.`](https://profile-readme-generator.com/)
 
 ---
 
