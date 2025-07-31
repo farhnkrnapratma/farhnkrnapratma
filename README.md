@@ -8,6 +8,7 @@
 
 ![Acrh Linux with COSMIC](./arch_cosmic.png)
 ---
+
 ```toml
 [desktop]
 os = "Arch Linux"
@@ -26,17 +27,27 @@ email = ["farhnkrnapratma@gmail.com", "farhnkrnapratma@protonmail.com"]
 matrix = "@farhnkrnapratma:matrix.org"
 irc = "farhnkrnapratma"
 ```
+
 ---
 I'm a tech enthusiast with interests in:
 
 * 🐧 **Linux & FOSS** – Passionate about exploring Linux distributions and contributing to open-source projects.
 * 💻 **Software Engineering** – Builds and improves system-level software.
 * 🛡️ **Cyber Security** – Focused on data protection and digital privacy.
+
 ---
+
 ### My #RoadCard
 
 [![roadmap.sh](https://roadmap.sh/card/wide/6682c21ad270cc49a6aaeac9?variant=dark)](https://roadmap.sh)
 ---
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/farhnkrnapratma/farhnkrnapratma/output/pacman-contribution-graph-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/farhnkrnapratma/farhnkrnapratma/output/pacman-contribution-graph.svg">
+  <img alt="pacman contribution graph" src="https://raw.githubusercontent.com/farhnkrnapratma/farhnkrnapratma/output/pacman-contribution-graph.svg">
+</picture>
+
 ### Anything else?
 
 Navigate to [**`/etc/profile`**](https://gravatar.com/farhnkrnapratma)
