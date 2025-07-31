@@ -19,6 +19,7 @@ I'm a tech enthusiast with interests in:
 
 ![GitHub](https://img.shields.io/badge/GitHub-m?style=social&logo=github&link=https%3A%2F%2Fgithub.com%2Ffarhnkrnapratma)
 ![GitLab](https://img.shields.io/badge/GitLab-m?style=social&logo=gitlab&link=https%3A%2F%2Fgitlab.com%2Ffarhnkrnapratma)
+![LeetCode](https://img.shields.io/badge/LeetCode-leetcode?style=social&logo=leetcode&link=https%3A%2F%2Fleetcode.com%2Fu%2Ffarhnkrnapratma%2F)
 ![NPM](https://img.shields.io/badge/NPM-m?style=social&logo=npm&link=https%3A%2F%2Fwww.npmjs.com%2F~farhnkrnapratma)
 ![Gravatar](https://img.shields.io/badge/Gravatar-m?style=social&logo=gravatar&link=https%3A%2F%2Fgravatar.com%2Ffarhnkrnapratma)
 ![Instagram](https://img.shields.io/badge/Instagram-Instagram?style=social&logo=instagram&link=https%3A%2F%2Finstagram.com%2Ffarhnkrnapratma)
