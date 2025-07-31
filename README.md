@@ -34,6 +34,7 @@ I'm a tech enthusiast with interests in:
 ![Medium](https://img.shields.io/badge/Medium-m?style=social&logo=medium&link=https%3A%2F%2Fmedium.com%2F%40farhnkrnapratma)
 ![Stack Overflow](https://img.shields.io/badge/Stack%20Overflow-m?style=social&logo=stackoverflow&link=https%3A%2F%2Fstackoverflow.com%2Fusers%2F22417176%2Ffarhnkrnapratma)
 ![LinkedIn](https://img.shields.io/badge/LinkedIn-m?style=social&&label=in&link=https%3A%2F%2Flinkedin.com%2Fin%2Ffarhnkrnapratma)
+![Spotify](https://img.shields.io/badge/Spotify-spotify?style=social&logo=spotify&link=https%3A%2F%2Fopen.spotify.com%2Fuser%2F31ib4wrvfu7f4xkxa5nfzevviq74)
 
 ## 📬 Contact Me
 
@@ -65,8 +66,8 @@ I'm a tech enthusiast with interests in:
 - 🔳 Terminal — **Wezterm**
 - 💻 Desktop Environment — **COSMIC**
 - 📝 Code Editor — **Neovim**
-- 🔤 Font — **JetBrains Mono Nerd Font**
-- 👨‍💻 Programming Language
+- 🔤 Font — **JetBrains Mono**
+- 👨‍💻 Programming Languages:
   - **Rust**
   - **Python**
   - **Go**
