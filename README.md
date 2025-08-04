@@ -1,6 +1,5 @@
 # 🌊 Welcome to My **`$HOME`**
 
-![Arch Linux](https://img.shields.io/badge/I%20Use%20Arch%20BTW-45475a?style=for-the-badge&logo=archlinux&labelColor=%2345475)
 ![GitHub followers](https://img.shields.io/github/followers/farhnkrnapratma?style=for-the-badge&logo=github&logoColor=%23cdd6f4&label=followers&labelColor=%2345475a&color=%2374c7ec)
 ![GitHub sponsors](https://img.shields.io/github/sponsors/farhnkrnapratma?style=for-the-badge&logo=github-sponsors&logoColor=%23cdd6f4&label=sponsors&labelColor=%2345475a&color=%2374c7ec)
 ![Open Collective](https://img.shields.io/opencollective/sponsors/farhnkrnapratma?style=for-the-badge&logo=opencollective&logoColor=%23cdd6f4&label=open%20collective&labelColor=%2345475a&color=%2374c7ec)
@@ -12,7 +11,7 @@ I'm a tech enthusiast with interests in:
 
 * 🐧 **Linux & FOSS** – Passionate about exploring Linux distributions and contributing to open-source projects.
 * 💻 **Software Engineering** – Builds and improves system-level software.
-* 🛡️ **Cyber Security** – Focused on data protection and digital privacy.
+* 🛡️ **Cybersecurity** – Focused on data protection and digital privacy.
 * 🪙 **Cryptocurrency** – Interested in blockchain technology, decentralized finance (DeFi), and privacy-focused crypto assets.
 
 ## 🤝 Let's Connect
@@ -57,27 +56,6 @@ I'm a tech enthusiast with interests in:
 ![Ethereum](https://img.shields.io/badge/0x7e0B2aEcDc26242Ea510146AD1505E9BBB79d04B-ethereum?style=social&logo=ethereum)
 ![Polygon](https://img.shields.io/badge/0x7e0B2aEcDc26242Ea510146AD1505E9BBB79d04B-polygon?style=social&logo=polygon)
 ![Sui](https://img.shields.io/badge/0x1c36daf9f305313989492be8950c2eefb867e6668ce2df363ff8cd82d4aaadd7-sui?style=social&logo=sui)
-
-## 🚀 My Setup
-
-- 🐧 Distro — **Arch Linux x86_64**
-- 🧬 Kernel — **Linux CachyOS**
-- 🐚 Shell — **Nushell**
-- 🔳 Terminal — **Wezterm**
-- 💻 Desktop Environment — **COSMIC**
-- 📝 Code Editor — **Neovim**
-- 🔤 Font — **JetBrains Mono**
-- 👨‍💻 Programming Languages:
-  - **Rust**
-  - **Python**
-  - **Go**
-  - **TypeScript**
-
-## My #RoadCard
-
-[![roadmap.sh](https://roadmap.sh/card/wide/6682c21ad270cc49a6aaeac9?variant=dark)](https://roadmap.sh)
-
-> View my profile on [`roadmap.sh`](https://roadmap.sh/u/farhnkrnapratma)
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/farhnkrnapratma/farhnkrnapratma/output/pacman-contribution-graph-dark.svg">
