@@ -3,7 +3,7 @@ import "./App.css";
 export default function App() {
 	return (
 		<div>
-			<p className={"font-black text-xl"}>Hello World!</p>
+			<p className={"text-xl"}>Lorem ipsum dolor sit amet...</p>
 		</div>
 	);
 }
