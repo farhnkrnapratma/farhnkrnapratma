@@ -13,21 +13,21 @@ function App() {
     () =>
       createTheme({
         palette: {
-          mode: "dark",
+          mode: "dark"
         },
         typography: {
           fontFamily: [
             '"JetBrains Mono"',
-            'monospace',
-            '-apple-system',
-            'BlinkMacSystemFont',
+            "monospace",
+            "-apple-system",
+            "BlinkMacSystemFont",
             '"Segoe UI"',
-            'Arial',
-            'sans-serif',
-          ].join(','),
-        },
+            "Arial",
+            "sans-serif"
+          ].join(",")
+        }
       }),
-    [],
+    []
   );
 
   return (
@@ -40,7 +40,7 @@ function App() {
           left: 0,
           width: "100%",
           height: "100%",
-          zIndex: -1,
+          zIndex: -1
         }}
         colors={["#5227FF", "#FF9FFC", "#B19EEF"]}
         autoDemo={true}
@@ -53,7 +53,7 @@ function App() {
           justifyContent: "center",
           alignItems: "center",
           minHeight: "100vh",
-          padding: 2,
+          padding: 2
         }}
       >
         <Alert
@@ -71,8 +71,8 @@ function App() {
               fontSize: "5rem",
               marginRight: 3,
               marginTop: 1,
-              marginBottom: 1,
-            },
+              marginBottom: 1
+            }
           }}
         >
           <AlertTitle sx={{ fontSize: "1.8rem", fontWeight: 600 }}>
