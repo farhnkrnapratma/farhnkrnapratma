@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    // Language & Environment
+    "target": "ES2020",
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "jsx": "react-jsx",
+    // Modules
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    // Type Checking
+    "strict": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    // Code Quality
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    // Emit
+    "noEmit": true,
+    // Performance
+    "incremental": true,
+    "skipLibCheck": true,
+    // Debugging
+    "sourceMap": true,
+    // Compatibility
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+    // Interop Constraints
+    "allowJs": true,
+    "resolveJsonModule": true
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "build"]
+}

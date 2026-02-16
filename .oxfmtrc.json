@@ -1,0 +1,16 @@
+{
+  "$schema": "./node_modules/oxfmt/configuration_schema.json",
+  "ignorePatterns": ["build/**", "*.yml", "*.json", "*.md", "*.html"],
+  "indentWidth": 2,
+  "useTabs": false,
+  "lineWidth": 100,
+  "indentStyle": "space",
+  "quotes": "single",
+  "jsxQuotes": "double",
+  "trailingComma": "none",
+  "semicolons": true,
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "bracketSameLine": false,
+  "endOfLine": "lf"
+}

@@ -1,0 +1,37 @@
+{
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@mui/icons-material": "^7.3.8",
+    "@mui/material": "^7.3.8",
+    "@tailwindcss/postcss": "^4.1.18",
+    "postcss": "^8.5.6",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "tailwindcss": "^4.1.18",
+    "three": "^0.182.0"
+  },
+  "name": "farhnkrnapratma",
+  "module": "./src/index.tsx",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "bun ./src/build.ts",
+    "clean": "rm -rf ./build/",
+    "dev": "bun --hot ./src/server.ts",
+    "lint": "bunx oxlint",
+    "lint:fix": "bunx oxlint --fix",
+    "fmt": "bunx oxfmt",
+    "fmt:check": "bunx oxfmt --check"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/react-dom": "^19.2.3",
+    "@types/three": "^0.182.0",
+    "oxfmt": "^0.32.0",
+    "oxlint": "^1.47.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5.9.3"
+  }
+}
