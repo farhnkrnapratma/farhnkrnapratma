@@ -6,7 +6,7 @@ import AlertTitle from "@mui/material/AlertTitle";
 import Box from "@mui/material/Box";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
-import LiquidEther from "./LiquidEther";
+import LiquidEther from "./components/LiquidEther";
 
 function App() {
   const theme = React.useMemo(

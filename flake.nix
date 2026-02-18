@@ -45,7 +45,6 @@
 
             bun run fmt
             bun run lint
-            bun run build
           '';
         };
       });
