@@ -14,7 +14,8 @@ const pages: { label: string; href: string; external?: boolean }[] = [
   { label: "Social", href: "/social" },
   { label: "Contact", href: "/contact" },
   { label: "GitHub", href: "https://github.com/farhnkrnapratma", external: true },
-  { label: "Blog", href: "/blog" }
+  { label: "Blog", href: "/blog" },
+  { label: "Feed", href: "/feeds" }
 ];
 
 function ResponsiveAppBar() {
@@ -24,8 +25,8 @@ function ResponsiveAppBar() {
       elevation={0}
       sx={{
         backgroundColor: "transparent",
-        backdropFilter: "blur(20px)",
-        WebkitBackdropFilter: "blur(20px)"
+        backdropFilter: "blur(10px)",
+        WebkitBackdropFilter: "blur(10px)"
       }}
     >
       <Container maxWidth="xl">
@@ -51,16 +52,12 @@ function ResponsiveAppBar() {
             }}
           >
             <TextType
-              text={["Hi there!", "My name is Farhan Kurnia Pratama", "You can call me Farhan"]}
-              typingSpeed={100}
-              pauseDuration={500}
+              text={["Hi there!"]}
+              typingSpeed={80}
               showCursor
               cursorCharacter="_"
-              deletingSpeed={100}
-              variableSpeedEnabled={false}
-              variableSpeedMin={100}
-              variableSpeedMax={120}
               cursorBlinkDuration={0.5}
+              loop={false}
             />
           </Typography>
           <Box sx={{ ml: "auto", display: { xs: "none", md: "flex" } }}>

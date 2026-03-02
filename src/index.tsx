@@ -4,7 +4,7 @@ import * as ReactDOM from "react-dom/client";
 import { StyledEngineProvider } from "@mui/material/styles";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
-import DarkVeil from "./components/DarkVeil";
+import PixelBlast from "./components/PixelBlast";
 import ResponsiveAppBar from "./components/ResponsiveAppBar";
 
 function App() {
@@ -25,14 +25,25 @@ function App() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <div style={{ width: "100%", height: "100%", position: "fixed", zIndex: -1 }}>
-        <DarkVeil
-          hueShift={0}
-          noiseIntensity={0}
-          scanlineIntensity={0}
-          speed={0.5}
-          scanlineFrequency={0}
-          warpAmount={0}
-        />
+      <PixelBlast
+        variant="square"
+        pixelSize={4}
+        color="#B19EEF"
+        patternScale={2}
+        patternDensity={1}
+        pixelSizeJitter={0}
+        enableRipples
+        rippleSpeed={0.4}
+        rippleThickness={0.12}
+        rippleIntensityScale={1.5}
+        liquid={false}
+        liquidStrength={0.12}
+        liquidRadius={1.2}
+        liquidWobbleSpeed={5}
+        speed={0.5}
+        edgeFade={0.25}
+        transparent
+      />
       </div>
       <ResponsiveAppBar />
     </ThemeProvider>
