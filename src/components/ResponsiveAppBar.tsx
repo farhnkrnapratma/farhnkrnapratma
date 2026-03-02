@@ -11,11 +11,16 @@ import ShinyText from "./ShinyText";
 import profilePhoto from "../assets/favicon.ico";
 
 const pages: { label: string; href: string; external?: boolean }[] = [
-  { label: "Social", href: "/social" },
-  { label: "Contact", href: "/contact" },
-  { label: "GitHub", href: "https://github.com/farhnkrnapratma", external: true },
-  { label: "Blog", href: "/blog" },
-  { label: "Feed", href: "/feeds" }
+  { label: "👥 Social", href: "/social" },
+  { label: "📫 Contact", href: "/contact" },
+  {
+    label: "GitHub",
+    href: "https://github.com/farhnkrnapratma",
+    external: true,
+  },
+  { label: "📖 Blog", href: "/blog" },
+  { label: "🗞️ Feed", href: "/feeds" },
+  { label: "♥️ Donate", href: "/donate" },
 ];
 
 function ResponsiveAppBar() {
@@ -26,7 +31,7 @@ function ResponsiveAppBar() {
       sx={{
         backgroundColor: "transparent",
         backdropFilter: "blur(10px)",
-        WebkitBackdropFilter: "blur(10px)"
+        WebkitBackdropFilter: "blur(10px)",
       }}
     >
       <Container maxWidth="xl">
@@ -34,7 +39,12 @@ function ResponsiveAppBar() {
           <Avatar
             src={profilePhoto}
             alt="Farhan Kurnia Pratama"
-            sx={{ display: { xs: "none", md: "flex" }, mr: 1.5, width: 50, height: "auto" }}
+            sx={{
+              display: { xs: "none", md: "flex" },
+              mr: 1.5,
+              width: 45,
+              height: "auto",
+            }}
           />
           <Typography
             variant="h6"
@@ -48,16 +58,32 @@ function ResponsiveAppBar() {
               fontWeight: 700,
               fontSize: { xs: "1rem", sm: "1.5rem" },
               color: "inherit",
-              textDecoration: "none"
+              textDecoration: "none",
             }}
           >
             <TextType
-              text={["Hi there!"]}
-              typingSpeed={80}
+              text={[
+                "Hello!",
+                "Hi there!",
+                "How's it going?",
+                "What's up?",
+                "How are you?",
+                "How are you today?",
+                "How was your day?",
+                "How was the weather?",
+                "What's going on?",
+                "Anything new lately?",
+                "Got a minute to chat?",
+                "What's on your mind?",
+                "How can I help you today?",
+                "Ready to get started?",
+              ]}
+              typingSpeed={90}
               showCursor
               cursorCharacter="_"
               cursorBlinkDuration={0.5}
-              loop={false}
+              deletingSpeed={90}
+              pauseDuration={5000}
             />
           </Typography>
           <Box sx={{ ml: "auto", display: { xs: "none", md: "flex" } }}>
@@ -66,7 +92,10 @@ function ResponsiveAppBar() {
                 key={label}
                 component="a"
                 href={href}
-                {...(external && { target: "_blank", rel: "noopener noreferrer" })}
+                {...(external && {
+                  target: "_blank",
+                  rel: "noopener noreferrer",
+                })}
                 sx={{
                   my: 2,
                   mr: 4,
@@ -75,7 +104,7 @@ function ResponsiveAppBar() {
                   display: "flex",
                   textTransform: "none",
                   fontSize: { xs: "0.85rem", sm: "1rem" },
-                  fontWeight: 600
+                  fontWeight: 600,
                 }}
               >
                 <ShinyText

@@ -5,10 +5,10 @@ Bun.build({
   naming: {
     asset: "[dir]/[name].[ext]",
     entry: "[name].[ext]",
-    chunk: "[name].[ext]"
+    chunk: "[name].[ext]",
   },
   sourcemap: "inline",
-  minify: true
+  minify: true,
 });
 
 Bun.write("./build/assets/banner.png", Bun.file("./src/assets/banner.png"));

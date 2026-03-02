@@ -4,18 +4,28 @@ server := "./src/server.ts"
 builder := "./src/build.ts"
 artifacts := "./build"
 
+alias i := install
+alias u := update
 alias b := build
 alias c := clean
 alias s := serve
 alias l := lint
 alias f := format
-alias lf := lint-fix
-alias fc := format-check
 
 [doc("Enter dev env")]
 @default:
-  echo Entering development environment...
-  @devel # equivalent to "nix develop" command
+  echo "Entering development environment..."
+  @devel
+
+[doc("Install packages")]
+@install:
+  echo "Installing packages..."
+  @bun install
+
+[doc("Update packages")]
+@update:
+  echo "Updating packages..."
+  @bun update
 
 [doc("Build artifacts")]
 @build:
@@ -28,26 +38,16 @@ alias fc := format-check
   @rm -rf {{artifacts}}
 
 [doc("Start server")]
-@serve: build
+@serve:
   echo "Starting development server..."
   @bun --hot {{server}}
 
 [doc("Lint projects")]
 @lint:
   echo "Linting projects..."
-  @bunx oxlint
-
-[doc("Lint then fix")]
-@lint-fix:
-  echo "Linting and fixing projects..."
-  @bunx oxlint --fix
+  @bunx --bun @biomejs/biome lint --write
 
 [doc("Format projects")]
 @format:
   echo "Formating projects..."
-  @bunx oxfmt
-
-[doc("Just check don not format")]
-@format-check:
-  echo "Checking projects..."
-  @bunx oxfmt --check
+  @bunx --bun @biomejs/biome format --write
