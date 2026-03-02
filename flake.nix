@@ -38,14 +38,6 @@
       devShells = eachSystem (system: {
         default = pkgs.${system}.mkShellNoCC {
           nativeBuildInputs = [ pkgs.${system}.bun ];
-          shellHook = ''
-            if [ -d node_modules ]; then
-              bun install
-            fi
-
-            bun run fmt
-            bun run lint
-          '';
         };
       });
     };
