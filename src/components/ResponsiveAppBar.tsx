@@ -11,16 +11,16 @@ import ShinyText from "./ShinyText";
 import profilePhoto from "../assets/favicon.ico";
 
 const pages: { label: string; href: string; external?: boolean }[] = [
-  { label: "👥 Social", href: "/social" },
-  { label: "📫 Contact", href: "/contact" },
+  { label: "Social", href: "/social" },
+  { label: "Contact", href: "/contact" },
   {
     label: "GitHub",
     href: "https://github.com/farhnkrnapratma",
     external: true,
   },
-  { label: "📖 Blog", href: "/blog" },
-  { label: "🗞️ Feed", href: "/feeds" },
-  { label: "♥️ Donate", href: "/donate" },
+  { label: "Blog", href: "/blog" },
+  { label: "Feed", href: "/feeds" },
+  { label: "Donate", href: "/donate" },
 ];
 
 function ResponsiveAppBar() {
@@ -42,7 +42,7 @@ function ResponsiveAppBar() {
             sx={{
               display: { xs: "none", md: "flex" },
               mr: 1.5,
-              width: 45,
+              width: 35,
               height: "auto",
             }}
           />
@@ -55,7 +55,7 @@ function ResponsiveAppBar() {
               mr: 2,
               display: { xs: "none", md: "flex" },
               letterSpacing: ".1rem",
-              fontWeight: 700,
+              fontWeight: 600,
               fontSize: { xs: "1rem", sm: "1.5rem" },
               color: "inherit",
               textDecoration: "none",
@@ -72,8 +72,6 @@ function ResponsiveAppBar() {
                 "How was your day?",
                 "How was the weather?",
                 "What's going on?",
-                "Anything new lately?",
-                "Got a minute to chat?",
                 "What's on your mind?",
                 "How can I help you today?",
                 "Ready to get started?",
@@ -82,7 +80,7 @@ function ResponsiveAppBar() {
               showCursor
               cursorCharacter="_"
               cursorBlinkDuration={0.5}
-              deletingSpeed={90}
+              deletingSpeed={60}
               pauseDuration={5000}
             />
           </Typography>
@@ -98,7 +96,7 @@ function ResponsiveAppBar() {
                 })}
                 sx={{
                   my: 2,
-                  mr: 4,
+                  mr: 2,
                   gap: 0.3,
                   color: "white",
                   display: "flex",
@@ -113,13 +111,15 @@ function ResponsiveAppBar() {
                   delay={0}
                   color="#b5b5b5"
                   shineColor="#ffffff"
-                  spread={120}
+                  spread={100}
                   direction="left"
                   yoyo={false}
                   pauseOnHover={false}
                   disabled={false}
                 />
-                {external && <LaunchIcon sx={{ fontSize: "1rem" }} />}
+                {external && (
+                  <LaunchIcon sx={{ fontSize: "1rem", opacity: 0.5 }} />
+                )}
               </Button>
             ))}
           </Box>

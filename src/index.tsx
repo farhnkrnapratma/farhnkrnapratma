@@ -15,7 +15,7 @@ function App() {
           mode: "dark",
         },
         typography: {
-          fontFamily: ['"JetBrains Mono"', "monospace"].join(","),
+          fontFamily: ["'Google Sans'", "sans-serif"].join(","),
         },
       }),
     [],
