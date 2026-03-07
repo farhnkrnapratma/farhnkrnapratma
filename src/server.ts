@@ -5,8 +5,8 @@ const resolvedRoutes = Object.fromEntries(
     Object.entries(routes).map(async ([url, file]) => {
       const mod = await import(`./${file}`);
       return [url, mod.default];
-    })
-  )
+    }),
+  ),
 );
 
 const server = Bun.serve({
