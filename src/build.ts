@@ -4,8 +4,8 @@ Bun.build({
   outdir: "./build",
   naming: {
     asset: "[dir]/[name].[ext]",
-    entry: "[name].[ext]",
-    chunk: "[name].[ext]",
+    entry: "[dir]/[name].[ext]",
+    chunk: "[dir]/[name].[ext]",
   },
   sourcemap: "inline",
   minify: true,

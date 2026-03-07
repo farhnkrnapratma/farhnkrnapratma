@@ -7,7 +7,6 @@ import Button from "@mui/material/Button";
 import Avatar from "@mui/material/Avatar";
 import LaunchIcon from "@mui/icons-material/Launch";
 import TextType from "./TextType";
-import ShinyText from "./ShinyText";
 import profilePhoto from "../assets/favicon.ico";
 
 const pages: { label: string; href: string; external?: boolean }[] = [
@@ -19,7 +18,7 @@ const pages: { label: string; href: string; external?: boolean }[] = [
     external: true,
   },
   { label: "Blog", href: "/blog" },
-  { label: "Feed", href: "/feeds" },
+  { label: "Feed", href: "/feed" },
   { label: "Donate", href: "/donate" },
 ];
 
@@ -28,6 +27,7 @@ function ResponsiveAppBar() {
     <AppBar
       position="static"
       elevation={0}
+      color="inherit"
       sx={{
         backgroundColor: "transparent",
         backdropFilter: "blur(10px)",
@@ -55,7 +55,7 @@ function ResponsiveAppBar() {
               mr: 2,
               display: { xs: "none", md: "flex" },
               letterSpacing: ".1rem",
-              fontWeight: 600,
+              fontWeight: 200,
               fontSize: { xs: "1rem", sm: "1.5rem" },
               color: "inherit",
               textDecoration: "none",
@@ -98,25 +98,14 @@ function ResponsiveAppBar() {
                   my: 2,
                   mr: 2,
                   gap: 0.3,
-                  color: "white",
+                  color: "inherit",
                   display: "flex",
                   textTransform: "none",
                   fontSize: { xs: "0.85rem", sm: "1rem" },
-                  fontWeight: 600,
+                  fontWeight: 300,
                 }}
               >
-                <ShinyText
-                  text={label}
-                  speed={2}
-                  delay={0}
-                  color="#b5b5b5"
-                  shineColor="#ffffff"
-                  spread={100}
-                  direction="left"
-                  yoyo={false}
-                  pauseOnHover={false}
-                  disabled={false}
-                />
+                {label}
                 {external && (
                   <LaunchIcon sx={{ fontSize: "1rem", opacity: 0.5 }} />
                 )}
