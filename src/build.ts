@@ -1,16 +1,28 @@
 import { routes } from "./routes";
 
-Bun.build({
+const buildConfig = {
   publicPath: "https://farhnkrnapratma.dev/",
-  entrypoints: Object.values(routes).map((f) => `./src/${f}`),
   outdir: "./build",
   naming: {
-    asset: "[dir]/[name].[ext]",
+    asset: "[name].[ext]",
     entry: "[dir]/[name].[ext]",
     chunk: "[dir]/[name].[ext]",
   },
-  sourcemap: "inline",
+  sourcemap: "inline" as const,
   minify: true,
-});
+};
 
-Bun.write("./build/assets/banner.png", Bun.file("./src/assets/banner.png"));
+const rootEntries = Object.entries(routes)
+  .filter(([url]) => url === "/")
+  .map(([, file]) => `./src/${file}`);
+
+const pageEntries = Object.entries(routes)
+  .filter(([url]) => url !== "/")
+  .map(([, file]) => `./src/${file}`);
+
+await Promise.all([
+  Bun.build({ ...buildConfig, root: "./src", entrypoints: rootEntries }),
+  Bun.build({ ...buildConfig, root: "./src/pages", entrypoints: pageEntries }),
+]);
+
+Bun.write("./build/banner.png", Bun.file("./src/assets/banner.png"));

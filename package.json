@@ -27,7 +27,7 @@
   "private": true,
   "scripts": {
     "build": "bun ./src/build.ts",
-    "clean": "rm -rf ./build",
+    "clean": "bun -e \"import {rmSync} from 'fs'; rmSync('./build', {recursive:true, force:true})\"",
     "serve": "bun --hot ./src/server.ts",
     "lint": "bunx --bun @biomejs/biome lint --write",
     "format": "bunx --bun @biomejs/biome format --write"
