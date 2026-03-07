@@ -1,19 +1,16 @@
-import Home from "./index.html";
-import Blog from "./pages/blog/index.html";
-import Contact from "./pages/contact/index.html";
-import Donate from "./pages/donate/index.html";
-import Feed from "./pages/feed/index.html";
-import Social from "./pages/social/index.html";
+import { routes } from "./routes";
+
+const resolvedRoutes = Object.fromEntries(
+  await Promise.all(
+    Object.entries(routes).map(async ([url, file]) => {
+      const mod = await import(`./${file}`);
+      return [url, mod.default];
+    })
+  )
+);
 
 const server = Bun.serve({
-  routes: {
-    "/": Home,
-    "/blog": Blog,
-    "/contact": Contact,
-    "/donate": Donate,
-    "/feed": Feed,
-    "/social": Social,
-  },
+  routes: resolvedRoutes,
   fetch() {
     return new Response("404 Not Found!");
   },
