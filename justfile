@@ -1,4 +1,4 @@
-set shell := ["powershell", "-c"]
+set shell := ["fish", "-c"]
 
 server := "./src/server.ts"
 builder := "./src/build.ts"
