@@ -5,11 +5,17 @@ import Home from "./index.html";
 const server = Bun.serve({
   routes: {
     "/": Home,
-    "/favicon": new Response(Bun.file(Icon)),
-    "/banner": new Response(Bun.file(Banner)),
+    "/favicon": () =>
+      new Response(Bun.file(Icon), {
+        headers: { "Content-Type": "image/x-icon" },
+      }),
+    "/banner": () =>
+      new Response(Bun.file(Banner), {
+        headers: { "Content-Type": "image/png" },
+      }),
   },
   fetch() {
-    return new Response("404 Not Found!");
+    return new Response("404 Not Found!", { status: 404 });
   },
 });
 
