@@ -35,7 +35,7 @@ alias f := format
 [doc("Clean artifacts")]
 @clean:
     echo "Cleaning artifacts..."
-    @rm -Recurse -Force {{ artifacts }}
+    @rm -rf {{ artifacts }}
 
 [doc("Start server")]
 @serve:

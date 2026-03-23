@@ -1,16 +1,13 @@
-import { routes } from "./routes";
-
-const resolvedRoutes = Object.fromEntries(
-  await Promise.all(
-    Object.entries(routes).map(async ([url, file]) => {
-      const mod = await import(`./${file}`);
-      return [url, mod.default];
-    }),
-  ),
-);
+import Icon from "./assets/favicon.ico";
+import Banner from "./assets/banner.png";
+import Home from "./index.html";
 
 const server = Bun.serve({
-  routes: resolvedRoutes,
+  routes: {
+    "/": Home,
+    "/favicon": new Response(Bun.file(Icon)),
+    "/banner": new Response(Bun.file(Banner)),
+  },
   fetch() {
     return new Response("404 Not Found!");
   },
