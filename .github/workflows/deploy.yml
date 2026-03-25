@@ -32,7 +32,9 @@ jobs:
         run: bun install
 
       - name: Build
-        run: bun run build
+        run:
+          cd node_modules/bun && node install.js
+          bun run build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
