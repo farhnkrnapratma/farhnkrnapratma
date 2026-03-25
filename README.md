@@ -1,3 +1,5 @@
+<!-- @format -->
+
 # 👋 Welcome to My `$HOME`
 
 **Tech enthusiast** with a strong focus on **Linux**, **FOSS**, and **software engineering**. Actively exploring and contributing to open-source projects, with a particular interest in building reliable, maintainable systems. Also deeply interested in **cybersecurity**, especially topics around system security, privacy, and secure software design.
@@ -7,7 +9,7 @@
 ![Instagram](https://img.shields.io/badge/Instagram-Instagram?style=social&logo=instagram&link=https%3A%2F%2Finstagram.com%2Ffarhnkrnapratma)
 ![Threads](https://img.shields.io/badge/Threads-m?style=social&logo=threads&link=https%3A%2F%2Fthreads.com%2F%40farhnkrnapratma)
 ![Facebook](https://img.shields.io/badge/Facebook-m?style=social&logo=facebook&link=https%3A%2F%2Ffacebook.com%2Ffarhnkrnapratma)
-![X (Twitter)](https://img.shields.io/badge/X%20(Twitter)-X?style=social&logo=x&link=https%3A%2F%2Fx.com%2Ffarhnkrnapratma)
+![X (Twitter)](<https://img.shields.io/badge/X%20(Twitter)-X?style=social&logo=x&link=https%3A%2F%2Fx.com%2Ffarhnkrnapratma>)
 ![Reddit](https://img.shields.io/badge/Reddit-Reddit?style=social&logo=reddit&link=https%3A%2F%2Fwww.reddit.com%2Fuser%2Ffarhnkrnapratma)
 ![Gravatar](https://img.shields.io/badge/Gravatar-m?style=social&logo=gravatar&link=https%3A%2F%2Fgravatar.com%2Ffarhnkrnapratma)
 ![Medium](https://img.shields.io/badge/Medium-m?style=social&logo=medium&link=https%3A%2F%2Fmedium.com%2F%40farhnkrnapratma)

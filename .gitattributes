@@ -8,3 +8,6 @@
 # Binary files
 *.png binary
 *.ico binary
+
+# JSON
+site.webmanifest linguist-language=JSON

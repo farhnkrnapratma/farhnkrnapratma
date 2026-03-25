@@ -1,0 +1,8 @@
+semi = false
+singleQuote = true
+trailingComma = "none"
+experimentalTernaries = true
+experimentalOperatorPosition = "start"
+bracketSameLine = true
+insertPragma = true
+checkIgnorePragma = true

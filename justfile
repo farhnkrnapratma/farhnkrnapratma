@@ -45,9 +45,9 @@ alias f := format
 [doc("Lint projects")]
 @lint:
     echo "Linting projects..."
-    @bunx --bun @biomejs/biome lint --write
+    @bunx eslint
 
 [doc("Format projects")]
 @format:
     echo "Formating projects..."
-    @bunx --bun @biomejs/biome format --write
+    @bunx prettier --write .
