@@ -1,5 +1,7 @@
 /** @format */
 
+import tailwind from "bun-plugin-tailwind";
+
 await Bun.build({
   publicPath: "https://farhnkrnapratma.dev/",
   entrypoints: [
@@ -14,12 +16,12 @@ await Bun.build({
     entry: "[dir]/[name].[ext]",
     chunk: "[dir]/[name].[ext]"
   },
-  minify: true
+  minify: true,
+  plugins: [tailwind]
 });
 
 await Bun.write("./build/rss.xml", Bun.file("./src/rss.xml"));
 await Bun.write("./build/banner.png", Bun.file("./src/assets/banner.png"));
-await Bun.write("./build/favicon.ico", Bun.file("./src/assets/favicon.ico"));
 await Bun.write(
   "./build/android-chrome-192x192.png",
   Bun.file("./src/assets/android-chrome-192x192.png")
