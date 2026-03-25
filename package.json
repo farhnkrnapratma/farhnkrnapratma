@@ -12,7 +12,7 @@
     "typescript-eslint": "^8.57.2"
   },
   "peerDependencies": {
-    "typescript": ">=5.9.0"
+    "typescript": "^5.9.3"
   },
   "scripts": {
     "build": "bun ./src/build.ts",
