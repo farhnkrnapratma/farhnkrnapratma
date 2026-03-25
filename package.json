@@ -1,19 +1,21 @@
 {
   "name": "farhnkrnapratma",
   "module": "index.ts",
-  "type": "module",
-  "private": true,
+  "dependencies": {
+    "bun-plugin-tailwind": "^0.1.2",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.5",
+    "tailwindcss": "^4.2.2"
+  },
   "devDependencies": {
-    "@biomejs/biome": "2.4.8",
     "@eslint/js": "^10.0.1",
     "@types/bun": "latest",
     "eslint": "^10.1.0",
     "prettier": "^3.8.1",
+    "typescript": "^6.0.2",
     "typescript-eslint": "^8.57.2"
   },
-  "peerDependencies": {
-    "typescript": "^5.9.3"
-  },
+  "private": true,
   "scripts": {
     "build": "bun ./src/build.ts",
     "clean": "rm -rf ./build",
@@ -22,10 +24,8 @@
     "format": "bunx prettier --write ."
   },
   "trustedDependencies": [
-    "unrs-resolver"
+    "unrs-resolver",
+    "bun-plugin-tailwind"
   ],
-  "dependencies": {
-    "eslint-config-prettier": "^10.1.8",
-    "eslint-plugin-prettier": "^5.5.5"
-  }
+  "type": "module"
 }

@@ -37,7 +37,10 @@
       formatter = eachSystem (system: treefmtEval.${system}.config.build.wrapper);
       devShells = eachSystem (system: {
         default = pkgs.${system}.mkShellNoCC {
-          nativeBuildInputs = [ pkgs.${system}.bun ];
+          nativeBuildInputs = [
+            pkgs.${system}.bun
+            pkgs.${system}.nodejs_25
+          ];
         };
       });
     };

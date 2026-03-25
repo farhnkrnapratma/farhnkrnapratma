@@ -1,0 +1,21 @@
+/** @format */
+
+@import "tailwindcss";
+
+@utility link-active {
+  color: var(--color-gvd-aqua);
+  @variant dark {
+    color: var(--color-gvl-aqua);
+  }
+}
+
+@utility link-hover {
+  @variant hover {
+    color: var(--color-gvd-aqua);
+  }
+  @variant dark {
+    @variant hover {
+      color: var(--color-gvl-aqua);
+    }
+  }
+}

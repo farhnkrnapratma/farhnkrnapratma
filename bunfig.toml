@@ -1,1 +1,4 @@
 telemetry = false
+
+[serve.static]
+plugins = ["bun-plugin-tailwind"]
