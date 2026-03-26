@@ -28,7 +28,7 @@
 ![Proton Mail](https://img.shields.io/badge/Proton%20Mail-m?style=social&logo=protonmail&link=farhnkrnapratma%40protonmail.com)
 ![Gmail](https://img.shields.io/badge/GMail-m?style=social&logo=gmail&link=farhnkrnapratma%40gmail.com)
 ![Matrix](https://img.shields.io/badge/Matrix-m?style=social&logo=matrix&link=https%3A%2F%2Fmatrix.to%2F%23%2F%23farhnkrnapratma%3Amatrix.org)
-![IRC](https://img.shields.io/badge/%23farhnkrnapratma-m?style=social&logo=liberadotchat)
+![IRC](https://img.shields.io/badge/farhnkrnapratma-m?style=social&logo=liberadotchat)
 
 ## ♥️ Support Me
 
