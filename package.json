@@ -1,6 +1,7 @@
 {
   "name": "farhnkrnapratma",
-  "module": "index.ts",
+  "private": true,
+  "type": "module",
   "dependencies": {
     "bun-plugin-tailwind": "^0.1.2",
     "eslint-config-prettier": "^10.1.8",
@@ -11,21 +12,23 @@
     "@eslint/js": "^10.0.1",
     "@types/bun": "latest",
     "eslint": "^10.1.0",
+    "jiti": "^2.6.1",
     "prettier": "^3.8.1",
-    "typescript": "^6.0.2",
+    "typescript": "5.9.2",
     "typescript-eslint": "^8.57.2"
   },
-  "private": true,
+  "peerDependencies": {
+    "typescript": "5.9.2"
+  },
+  "trustedDependencies": [
+    "unrs-resolver",
+    "bun-plugin-tailwind"
+  ],
   "scripts": {
     "build": "bun ./src/build.ts",
     "clean": "rm -rf ./build",
     "serve": "bun --hot ./src/server.ts",
     "lint": "bunx eslint",
     "format": "bunx prettier --write ."
-  },
-  "trustedDependencies": [
-    "unrs-resolver",
-    "bun-plugin-tailwind"
-  ],
-  "type": "module"
+  }
 }
