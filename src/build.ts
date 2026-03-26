@@ -3,7 +3,7 @@
 import tailwind from "bun-plugin-tailwind";
 
 await Bun.build({
-  publicPath: "https://farhnkrnapratma.dev/",
+  publicPath: "https://fkp.my.id/",
   entrypoints: [
     "./src/index.html",
     "./src/blog/index.html",
