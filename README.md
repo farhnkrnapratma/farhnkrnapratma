@@ -9,7 +9,7 @@
 
 I'm a **tech enthusiast** with a strong focus on **Linux**, **Unix-like OS**,
 **Free and Open-Source Software (FOSS)**, and **software engineering**.
-I'm passionate about building *reliable* and *maintainable* systems.
+I'm passionate about building _reliable_ and _maintainable_ systems.
 I actively explore open-source projects and occasionally contribute when I can.
 Beyond that, I'm deeply interested in **cybersecurity**,
 particularly system security, privacy, and secure software design.

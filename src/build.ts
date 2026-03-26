@@ -4,12 +4,7 @@ import tailwind from "bun-plugin-tailwind";
 
 await Bun.build({
   publicPath: "https://fkp.my.id/",
-  entrypoints: [
-    "./src/index.html",
-    "./src/blog/index.html",
-    "./src/contact/index.html",
-    "./src/support/index.html"
-  ],
+  entrypoints: ["./src/index.html", "./src/blog/index.html"],
   outdir: "./build",
   naming: {
     asset: "[name].[ext]",
