@@ -152,9 +152,10 @@ html_post() {
   <main class="md:col-start-2 col-start-auto row-start-2 pl-4 pr-4">
     <article>
       <header>
-        <div class="text-4xl">${title}</div>
         <time datetime="${date_str}">${date_str}</time>
+        <div class="text-4xl">${title}</div>
       </header>
+      <br />
       <section>
         ${content}
       </section>
@@ -222,7 +223,7 @@ html_index() {
     <a href="https://fkp.my.id/rss.xml" download>rss</a>
   </nav>
   <main class="md:col-start-2 col-start-auto row-start-2 pl-4 pr-4">
-    <div class="text-4xl">Blog</div>
+    <div class="text-4xl">Blog</div> <br />
     <ul>
       ${items}
     </ul>
