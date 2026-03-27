@@ -6,10 +6,10 @@
     <description>The official blog website of Farhan Kurnia Pratama | Email: contact@fkp.my.id</description>
     <language>en-US</language>
     <copyright>Copyright 2026 Farhan Kurnia Pratama</copyright>
-    <lastBuildDate>Sat, 28 Mar 2026 02:57:20 +0700</lastBuildDate>
+    <lastBuildDate>Sat, 28 Mar 2026 03:16:58 +0700</lastBuildDate>
     <managingEditor>contact@fkp.my.id (Farhan Kurnia Pratama)</managingEditor>
     <webMaster>contact@fkp.my.id (Farhan Kurnia Pratama)</webMaster>
-    <generator>shell script buatan saya sendiri</generator>
+    <generator>Bash Script (https://github.com/farhnkrnapratma/farhnkrnapratma/generate.sh)</generator>
     <docs>https://www.rssboard.org/rss-specification</docs>
     <ttl>60</ttl>
     <image>
@@ -57,7 +57,7 @@ fn main() {
 
     app.run();
 }</code></pre>]]></content:encoded>
-      <pubDate>Sun, 12 Apr 2026 00:00:00 +0700</pubDate>
+      <pubDate>Sun, 12 Apr 2026 09:23:00 +0700</pubDate>
       <dc:creator>Farhan Kurnia Pratama</dc:creator>
     </item>
     <item>
@@ -82,7 +82,7 @@ architecture and security standards.</p></li>
 <p>The key to these ideas is focusing on solving specific,
 <em>high-ticket pain points</em> for companies, rather than just
 wrapping a ChatGPT <em>prompt</em> into a regular application.</p>]]></content:encoded>
-      <pubDate>Thu, 02 Apr 2026 00:00:00 +0700</pubDate>
+      <pubDate>Thu, 02 Apr 2026 14:30:00 +0700</pubDate>
       <dc:creator>Farhan Kurnia Pratama</dc:creator>
     </item>
   </channel>

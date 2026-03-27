@@ -5,26 +5,18 @@ alias b := build
 alias c := clean
 alias d := check
 alias f := format
+alias g := generate
 alias i := install
 alias l := lint
 alias s := serve
 alias u := update
-
-[doc("Brute force mode")]
-@default:
-  @just clean
-  @just update
-  @just install
-  @just build
-  @just check
-  @just serve
 
 [doc("Audit all packages")]
 @audit:
   @bun audit
 
 [doc("Build this project")]
-@build:
+@build: generate format lint check
   @bun run ./build.ts
 
 [doc("Remove build directory")]
@@ -38,6 +30,10 @@ alias u := update
 @format:
   @bunx --bun @biomejs/biome format --write --verbose
   @xq -i src/rss.xml
+
+[doc("Generate blog and RSS")]
+@generate:
+  @./generate.sh
 
 [doc("Install all packages")]
 @install:

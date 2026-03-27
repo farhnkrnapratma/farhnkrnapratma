@@ -100,9 +100,10 @@ to_rfc822() {
 html_post() {
   local title="$1"
   local date_str="$2"
-  local description="$3"
-  local url="$4"
-  local content="$5"
+  local date_rfc="$3"
+  local description="$4"
+  local url="$5"
+  local content="$6"
 
   cat << HTML
 <!doctype html>
@@ -156,7 +157,7 @@ html_post() {
   <main class="md:col-start-2 col-start-auto row-start-2 pl-4 pr-4">
     <article>
       <header>
-        <time datetime="${date_str}">${date_str}</time>
+        <time datetime="${date_str}">${date_rfc}</time>
         <div class="text-4xl">${title}</div>
       </header>
       <br />
@@ -264,7 +265,7 @@ rss_open() {
     <lastBuildDate>${build_date}</lastBuildDate>
     <managingEditor>$(xml_escape "${SITE_EMAIL} (${SITE_AUTHOR})")</managingEditor>
     <webMaster>$(xml_escape "${SITE_EMAIL} (${SITE_AUTHOR})")</webMaster>
-    <generator>shell script buatan saya sendiri</generator>
+    <generator>Bash Script (https://github.com/farhnkrnapratma/farhnkrnapratma/generate.sh)</generator>
     <docs>https://www.rssboard.org/rss-specification</docs>
     <ttl>60</ttl>
     <image>
@@ -367,6 +368,9 @@ main() {
     local post_dir="${BLOG_DIR}/${post_year}/${post_month}/${slug}"
     local body html_content
 
+    local rfc_date
+    rfc_date=$(to_rfc822 "$date")
+
     echo "[BUILD] Processing post: slug=${slug}  date=${date}"
 
     body=$(get_body "$file")
@@ -376,6 +380,7 @@ main() {
     html_post \
       "$title" \
       "$date" \
+      "$rfc_date" \
       "$description" \
       "$post_url" \
       "$html_content" \
@@ -383,14 +388,12 @@ main() {
 
     index_items+="<li><time datetime=\"${date}\">${date}</time> — <a href=\"./${post_year}/${post_month}/${slug}/\">${title}</a></li>\n"
     if ((rss_count < MAX_RSS_ITEMS)); then
-      local pub_date
-      pub_date=$(to_rfc822 "$date")
       rss_items+=$(
         rss_item \
           "$title" \
           "$post_url" \
           "$description" \
-          "$pub_date" \
+          "$rfc_date" \
           "$html_content" \
           "$SITE_AUTHOR"
       )

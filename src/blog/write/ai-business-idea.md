@@ -1,6 +1,6 @@
 ---
 title: AI-Based Business Ideas with Massive Scale Potential
-date: 2026-04-02
+date: 2026-04-02 14:30:00
 description: Exploring several B2B business models using AI that can generate high and stable income.
 slug: ai-business-ideas
 ---
