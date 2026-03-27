@@ -1,5 +1,3 @@
-<!-- @format -->
-
 # 🌊 My `/home`
 
 ![CI](https://img.shields.io/github/check-runs/farhnkrnapratma/farhnkrnapratma/main?label=CI&logo=github)
