@@ -15,8 +15,14 @@ await Bun.build({
   plugins: [tailwind]
 })
 
-await Bun.write("./build/rss.xml", Bun.file("./src/rss.xml"))
-await Bun.write("./build/banner.png", Bun.file("./src/assets/banner.png"))
+await Bun.write(
+  "./build/banner-home.png",
+  Bun.file("./src/assets/banner-home.png")
+)
+await Bun.write(
+  "./build/banner-blog.png",
+  Bun.file("./src/assets/banner-blog.png")
+)
 await Bun.write(
   "./build/android-chrome-192x192.png",
   Bun.file("./src/assets/android-chrome-192x192.png")

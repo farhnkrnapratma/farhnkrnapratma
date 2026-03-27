@@ -1,7 +1,6 @@
 /** @format */
 
-@import url("https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&display=swap");
 @import "tailwindcss";
 
 *,
@@ -11,28 +10,8 @@
 }
 
 body {
-  font-family:
-    "Google Sans Code",
-    system-ui,
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    Roboto,
-    Oxygen,
-    Ubuntu,
-    Cantarell,
-    "Open Sans",
-    "Helvetica Neue",
-    sans-serif;
+  font-family: "Google Sans Code", monospace;
   scroll-behavior: smooth;
-}
-
-@utility material-symbols-rounded {
-  font-variation-settings:
-    "FILL" 0,
-    "wght" 200,
-    "GRAD" -25,
-    "opsz" 20;
 }
 
 @utility link-active {

@@ -1,58 +1,53 @@
-set shell := ["fish", "-c"]
+set shell := ["fish", "--private", "--interactive", "--command"]
 
-server := "./src/server.ts"
-builder := "./src/build.ts"
-artifacts := "./build"
-
-alias i := install
-alias u := update
+alias a := audit
 alias b := build
 alias c := clean
-alias s := serve
-alias l := lint
 alias f := format
-alias p := parallel
+alias i := install
+alias l := lint
+alias s := serve
+alias u := update
 
-[doc("Enter dev env")]
+[doc("Brute force mode")]
 @default:
-  echo "Entering development environment..."
-  @devel
+  @just clean
+  @just update
+  @just install
+  @just build
+  @just format
+  @just lint
+  @just serve
 
-[doc("Install packages")]
+[doc("Audit all packages")]
+@audit:
+  @bun audit
+
+[doc("Build this project")]
+@build:
+  @bun run ./build.ts
+
+[doc("Remove build directory")]
+@clean:
+  @rm -rf ./build
+
+[doc("Format this project")]
+@format:
+  @bunx prettier --write .
+  @bunx prettier --write bun.lock --parser json
+
+[doc("Install all packages")]
 @install:
-  echo "Installing packages..."
   @bun install
 
-[doc("Update packages")]
-@update:
-  echo "Updating packages..."
-  @bun update
-
-[doc("Build artifacts")]
-@build:
-  echo "Building artifacts..."
-  @bun {{ builder }}
-
-[doc("Clean artifacts")]
-@clean:
-  echo "Cleaning artifacts..."
-  @rm -rf {{ artifacts }}
-
-[doc("Start server")]
-@serve:
-  echo "Starting development server..."
-  @bun --hot {{ server }}
-
-[doc("Lint projects")]
+[doc("Lint this project")]
 @lint:
-  echo "Linting projects..."
   @bunx eslint
 
-[doc("Format projects")]
-@format:
-  echo "Formating projects..."
-  @bunx prettier --write .
+[doc("Start development server")]
+@serve:
+  @bun run ./serve.ts --hot
 
-@parallel:
-  echo "Formating and linting projects..."
-  @bun run --parallel format lint
+[doc("Update all packages")]
+@update:
+  @bun update
