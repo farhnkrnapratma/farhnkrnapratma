@@ -6,7 +6,7 @@
     <description>The official blog website of Farhan Kurnia Pratama | Email: contact@fkp.my.id</description>
     <language>en-US</language>
     <copyright>Copyright 2026 Farhan Kurnia Pratama</copyright>
-    <lastBuildDate>Sat, 28 Mar 2026 02:50:19 +0700</lastBuildDate>
+    <lastBuildDate>Sat, 28 Mar 2026 02:57:20 +0700</lastBuildDate>
     <managingEditor>contact@fkp.my.id (Farhan Kurnia Pratama)</managingEditor>
     <webMaster>contact@fkp.my.id (Farhan Kurnia Pratama)</webMaster>
     <generator>shell script buatan saya sendiri</generator>
@@ -37,22 +37,26 @@ low-level components like a Wayland <em>compositor</em>. We can avoid
 many of the <em>bugs</em> that frequently occur in C/C++.</p>
 <p>Here is an example of a simple GTK4 application initialization in
 Rust:</p>
-<p>```rust use gtk::prelude::*; use gtk::{Application,
-ApplicationWindow};</p>
-<p>fn main() { let app = Application::builder()
-.application_id(“id.my.fkp.wayland_de”) .build();</p>
-<pre><code>app.connect_activate(|app| {
-    let window = ApplicationWindow::builder()
-        .application(app)
-        .title(&quot;My Custom DE&quot;)
-        .default_width(800)
-        .default_height(600)
-        .build();
-    window.present();
-});
+<pre class="rust"><code>use gtk::prelude::*;
+use gtk::{Application, ApplicationWindow};
 
-app.run();</code></pre>
-<p>}</p>]]></content:encoded>
+fn main() {
+    let app = Application::builder()
+        .application_id(&quot;id.my.fkp.wayland_de&quot;)
+        .build();
+
+    app.connect_activate(|app| {
+        let window = ApplicationWindow::builder()
+            .application(app)
+            .title(&quot;My Custom DE&quot;)
+            .default_width(800)
+            .default_height(600)
+            .build();
+        window.present();
+    });
+
+    app.run();
+}</code></pre>]]></content:encoded>
       <pubDate>Sun, 12 Apr 2026 00:00:00 +0700</pubDate>
       <dc:creator>Farhan Kurnia Pratama</dc:creator>
     </item>
