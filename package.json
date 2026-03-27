@@ -3,17 +3,9 @@
   "type": "module",
   "private": true,
   "devDependencies": {
-    "@eslint/js": "^10.0.1",
-    "@prettier/plugin-xml": "^3.4.2",
+    "@biomejs/biome": "2.4.9",
     "@types/bun": "latest",
     "bun-plugin-tailwind": "^0.1.2",
-    "eslint": "^10.1.0",
-    "eslint-config-prettier": "^10.1.8",
-    "eslint-plugin-prettier": "^5.5.5",
-    "jiti": "^2.6.1",
-    "prettier": "^3.8.1",
-    "prettier-plugin-sh": "^0.18.0",
-    "prettier-plugin-toml": "^2.0.6",
     "tailwindcss": "^4.2.2",
     "typescript": "5.9.2",
     "typescript-eslint": "^8.57.2"
@@ -21,7 +13,5 @@
   "peerDependencies": {
     "typescript": "5.9.2"
   },
-  "trustedDependencies": [
-    "bun-plugin-tailwind"
-  ]
+  "trustedDependencies": ["bun-plugin-tailwind"]
 }

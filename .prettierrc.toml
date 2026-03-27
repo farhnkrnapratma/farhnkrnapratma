@@ -1,2 +1,0 @@
-trailingComma = "none"
-plugins = ["@prettier/plugin-xml", "prettier-plugin-sh", "prettier-plugin-toml"]

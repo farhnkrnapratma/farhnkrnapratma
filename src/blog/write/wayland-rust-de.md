@@ -1,19 +1,19 @@
 ---
-title: "Membuat Wayland Desktop Environment dengan Rust dan GTK4"
+title: "Building a Wayland Desktop Environment with Rust and GTK4"
 date: 2026-04-12
-description: "Catatan perjalanan saya membangun DE kustom menggunakan ekosistem Rust, GTK-rs, dan libadwaita."
+description: "Notes on my journey building a custom DE using the Rust, GTK-rs, and libadwaita ecosystem."
 slug: wayland-rust-de
 ---
 
-Eksplorasi membangun _Desktop Environment_ (DE) sendiri yang berjalan di atas protokol Wayland adalah tantangan yang sangat menarik.
+Exploring the creation of a custom _Desktop Environment_ (DE) running on the Wayland protocol is a very exciting challenge.
 
-Saya sangat menyukai antarmuka aplikasi bawaan GNOME, tetapi untuk lingkungan desktopnya, saya menginginkan sesuatu yang diracik khusus untuk alur kerja saya sendiri. Menggunakan **Rust** dipadukan dengan **GTK-rs** dan `libadwaita` memberikan kombinasi performa, keamanan memori, dan tampilan antarmuka yang modern.
+I really love the interface of GNOME's default applications, but for the desktop environment itself, I want something tailored specifically to my own workflow. Using **Rust** combined with **GTK-rs** and `libadwaita` provides a combination of performance, memory safety, and a modern interface look.
 
-### Kenapa Rust?
+### Why Rust?
 
-Keamanan memori (_memory safety_) bawaan Rust sangat krusial ketika berhadapan dengan komponen tingkat rendah seperti _compositor_ Wayland. Kita bisa menghindari banyak _bug_ yang sering muncul di bahasa C/C++.
+Rust's built-in _memory safety_ is crucial when dealing with low-level components like a Wayland _compositor_. We can avoid many of the _bugs_ that frequently occur in C/C++.
 
-Berikut adalah contoh inisialisasi aplikasi GTK4 sederhana di Rust:
+Here is an example of a simple GTK4 application initialization in Rust:
 
 ```rust
 use gtk::prelude::*;
@@ -36,6 +36,3 @@ fn main() {
 
     app.run();
 }
-```
-
-Pada tulisan berikutnya, saya akan membahas bagaimana menghubungkan _window_ ini dengan protokol Wayland!

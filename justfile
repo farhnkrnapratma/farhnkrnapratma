@@ -3,6 +3,7 @@ set shell := ["fish", "--private", "--interactive", "--command"]
 alias a := audit
 alias b := build
 alias c := clean
+alias d := check
 alias f := format
 alias i := install
 alias l := lint
@@ -15,8 +16,7 @@ alias u := update
   @just update
   @just install
   @just build
-  @just format
-  @just lint
+  @just check
   @just serve
 
 [doc("Audit all packages")]
@@ -31,10 +31,13 @@ alias u := update
 @clean:
   @rm -rf ./build
 
+@check:
+  @bunx --bun @biomejs/biome check --write --verbose
+
 [doc("Format this project")]
 @format:
-  @bunx prettier --write .
-  @bunx prettier --write bun.lock --parser json
+  @bunx --bun @biomejs/biome format --write --verbose
+  @xq -i src/rss.xml
 
 [doc("Install all packages")]
 @install:
@@ -42,7 +45,7 @@ alias u := update
 
 [doc("Lint this project")]
 @lint:
-  @bunx eslint
+  @bunx --bun @biomejs/biome lint --write --verbose
 
 [doc("Start development server")]
 @serve:

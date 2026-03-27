@@ -3,19 +3,19 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Building a Wayland Desktop Environment with Rust and GTK4 | Farhan Kurnia Pratama</title>
+    <title>AI-Based Business Ideas with Massive Scale Potential | Farhan Kurnia Pratama</title>
     <meta
       name="description"
-      content="Notes on my journey building a custom DE using the Rust, GTK-rs, and libadwaita ecosystem.">
-    <link rel="canonical" href="https://fkp.my.id/blog/2026/04/wayland-rust-de">
+      content="Exploring several B2B business models using AI that can generate high and stable income.">
+    <link rel="canonical" href="https://fkp.my.id/blog/2026/04/ai-business-ideas">
     <meta
       property="og:title"
-      content="Building a Wayland Desktop Environment with Rust and GTK4 | Farhan Kurnia Pratama">
+      content="AI-Based Business Ideas with Massive Scale Potential | Farhan Kurnia Pratama">
     <meta
       property="og:description"
-      content="Notes on my journey building a custom DE using the Rust, GTK-rs, and libadwaita ecosystem.">
+      content="Exploring several B2B business models using AI that can generate high and stable income.">
     <meta property="og:type" content="article">
-    <meta property="og:url" content="https://fkp.my.id/blog/2026/04/wayland-rust-de">
+    <meta property="og:url" content="https://fkp.my.id/blog/2026/04/ai-business-ideas">
     <meta property="og:site_name" content="fkp.my.id">
     <meta property="og:image" content="https://fkp.my.id/banner-blog.png">
     <meta property="og:image:secure_url" content="https://fkp.my.id/banner-blog.png">
@@ -29,15 +29,15 @@
     <meta property="profile:last_name" content="Pratama">
     <meta property="profile:username" content="farhnkrnapratma">
     <meta property="profile:gender" content="male">
-    <meta property="article:published_time" content="2026-04-12">
+    <meta property="article:published_time" content="2026-04-02">
     <meta property="article:author" content="Farhan Kurnia Pratama">
     <meta name="twitter:card" content="summary_large_image">
     <meta
       name="twitter:title"
-      content="Building a Wayland Desktop Environment with Rust and GTK4 | Farhan Kurnia Pratama">
+      content="AI-Based Business Ideas with Massive Scale Potential | Farhan Kurnia Pratama">
     <meta
       name="twitter:description"
-      content="Notes on my journey building a custom DE using the Rust, GTK-rs, and libadwaita ecosystem.">
+      content="Exploring several B2B business models using AI that can generate high and stable income.">
     <meta name="twitter:image" content="https://fkp.my.id/banner-blog.png">
     <link rel="icon" href="../../../../assets/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="../../../../assets/apple-touch-icon.png">
@@ -65,48 +65,40 @@
     <main class="md:col-start-2 col-start-auto row-start-2 pl-4 pr-4">
       <article>
         <header>
-          <time datetime="2026-04-12">2026-04-12</time>
-          <div class="text-4xl">Building a Wayland Desktop Environment with Rust and GTK4</div>
+          <time datetime="2026-04-02">2026-04-02</time>
+          <div class="text-4xl">AI-Based Business Ideas with Massive Scale Potential</div>
         </header>
         <br>
         <section>
           <p>
-            Exploring the creation of a custom <em>Desktop Environment</em> (DE) running on the
-            Wayland protocol is a very exciting challenge.
+            The utilization of artificial intelligence (AI) is no longer just a trend, but rather a
+            fundamental infrastructure for modern business efficiency. Building SaaS (Software as a
+            Service) products that integrate AI has tremendous scalability potential.
           </p>
+          <p>Here are a few business architectures I am currently researching:</p>
+          <ol type="1">
+            <li>
+              <p>
+                <strong>B2B Financial Report Automation</strong>
+                Using LLMs to extract and standardize data from thousands of irregular invoices or
+                receipts into an audit-ready format.
+              </p>
+            </li>
+            <li>
+              <p>
+                <strong>Domain-Specific Coding Assistant</strong>
+                Unlike general coding assistants, this AI is trained on an enterprise’s internal
+                <em>codebase</em>
+                repositories so it understands their internal architecture and security standards.
+              </p>
+            </li>
+          </ol>
           <p>
-            I really love the interface of GNOME’s default applications, but for the desktop
-            environment itself, I want something tailored specifically to my own workflow. Using
-            <strong>Rust</strong>
-            combined with
-            <strong>GTK-rs</strong>
-            and <code>libadwaita</code> provides a combination of performance, memory safety, and a
-            modern interface look.
+            The key to these ideas is focusing on solving specific,
+            <em>high-ticket pain points</em>
+            for companies, rather than just wrapping a ChatGPT <em>prompt</em> into a regular
+            application.
           </p>
-          <h3 id="why-rust">Why Rust?</h3>
-          <p>
-            Rust’s built-in <em>memory safety</em> is crucial when dealing with low-level components
-            like a Wayland <em>compositor</em>. We can avoid many of the <em>bugs</em> that
-            frequently occur in C/C++.
-          </p>
-          <p>Here is an example of a simple GTK4 application initialization in Rust:</p>
-          <p>```rust use gtk::prelude::*; use gtk:: { Application, ApplicationWindow};</p>
-          <p>
-            fn main() { let app = Application::builder() .application_id(“id.my.fkp.wayland_de”)
-            .build();
-          </p>
-          <pre><code>app.connect_activate(|app| {
-    let window = ApplicationWindow::builder()
-        .application(app)
-        .title(&quot;My Custom DE&quot;)
-        .default_width(800)
-        .default_height(600)
-        .build();
-    window.present();
-});
-
-app.run();</code></pre>
-          <p>}</p>
         </section>
       </article>
     </main>
