@@ -1,10 +1,6 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# =============================================================================
-# build-blog.sh — Convert Markdown to HTML pages + RSS feed
-# =============================================================================
-
 # -- Configuration -------------------------------------------------------------
 
 SITE_URL="https://fkp.my.id"
@@ -15,7 +11,6 @@ SITE_EMAIL="contact@fkp.my.id"
 SITE_LANGUAGE="en-US"
 SITE_COPYRIGHT="Copyright $(date +%Y) Farhan Kurnia Pratama"
 
-# Direktori sumber & output (disesuaikan untuk Bun di /src)
 SRC_DIR="./src/blog/write"
 OUTPUT_DIR="./src"
 BLOG_DIR="${OUTPUT_DIR}/blog"
@@ -227,7 +222,7 @@ html_index() {
     <a href="https://fkp.my.id/rss.xml" download>rss</a>
   </nav>
   <main class="md:col-start-2 col-start-auto row-start-2 pl-4 pr-4">
-    <div class="text-lg">Blog</div>
+    <div class="text-4xl">Blog</div>
     <ul>
       ${items}
     </ul>
@@ -372,7 +367,7 @@ main() {
       "$html_content" \
       > "${post_dir}/index.html"
 
-    index_items+="<li><time datetime=\"${date}\">${date}</time> — <a href=\"./${post_year}/${post_month}/${slug}/index.html\">${title}</a></li>\n"
+    index_items+="<li><time datetime=\"${date}\">${date}</time> — <a href=\"./${post_year}/${post_month}/${slug}/\">${title}</a></li>\n"
     if ((rss_count < MAX_RSS_ITEMS)); then
       local pub_date
       pub_date=$(to_rfc822 "$date")
