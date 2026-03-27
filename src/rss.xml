@@ -1,101 +1,84 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<rss
-  version="2.0"
-  xmlns:atom="http://www.w3.org/2005/Atom"
-  xmlns:content="http://purl.org/rss/1.0/modules/content/"
-  xmlns:dc="http://purl.org/dc/elements/1.1/"
->
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
     <title>Farhan Kurnia Pratama | Blog</title>
     <link>https://fkp.my.id/blog</link>
-    <description
-    >The official blog website of Farhan Kurnia Pratama | Email: contact@fkp.my.id</description>
+    <description>The official blog website of Farhan Kurnia Pratama | Email: contact@fkp.my.id</description>
     <language>en-US</language>
     <copyright>Copyright 2026 Farhan Kurnia Pratama</copyright>
-    <lastBuildDate>Sat, 28 Mar 2026 01:20:16 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 28 Mar 2026 02:50:19 +0700</lastBuildDate>
     <managingEditor>contact@fkp.my.id (Farhan Kurnia Pratama)</managingEditor>
-    <atom:link
-      href="https://fkp.my.id/rss.xml"
-      rel="self"
-      type="application/rss+xml"
-    />
+    <webMaster>contact@fkp.my.id (Farhan Kurnia Pratama)</webMaster>
+    <generator>shell script buatan saya sendiri</generator>
+    <docs>https://www.rssboard.org/rss-specification</docs>
+    <ttl>60</ttl>
+    <image>
+      <url>https://fkp.my.id/android-chrome-192x192.png</url>
+      <title>Farhan Kurnia Pratama | Blog</title>
+      <link>https://fkp.my.id/blog</link>
+    </image>
+    <atom:link href="https://fkp.my.id/rss.xml" rel="self" type="application/rss+xml"/>
     <item>
-      <title>Membuat Wayland Desktop Environment dengan Rust dan GTK4</title>
+      <title>Building a Wayland Desktop Environment with Rust and GTK4</title>
       <link>https://fkp.my.id/blog/2026/04/wayland-rust-de</link>
-      <guid
-        isPermaLink="true"
-      >https://fkp.my.id/blog/2026/04/wayland-rust-de</guid>
-      <description
-      >Catatan perjalanan saya membangun DE kustom menggunakan ekosistem Rust, GTK-rs, dan libadwaita.</description>
-      <content:encoded
-      ><![CDATA[<p>Eksplorasi membangun <em>Desktop Environment</em> (DE) sendiri yang
-berjalan di atas protokol Wayland adalah tantangan yang sangat
-menarik.</p>
-<p>Saya sangat menyukai antarmuka aplikasi bawaan GNOME, tetapi untuk
-lingkungan desktopnya, saya menginginkan sesuatu yang diracik khusus
-untuk alur kerja saya sendiri. Menggunakan <strong>Rust</strong>
-dipadukan dengan <strong>GTK-rs</strong> dan <code>libadwaita</code>
-memberikan kombinasi performa, keamanan memori, dan tampilan antarmuka
-yang modern.</p>
-<h3 id="kenapa-rust">Kenapa Rust?</h3>
-<p>Keamanan memori (<em>memory safety</em>) bawaan Rust sangat krusial
-ketika berhadapan dengan komponen tingkat rendah seperti
-<em>compositor</em> Wayland. Kita bisa menghindari banyak <em>bug</em>
-yang sering muncul di bahasa C/C++.</p>
-<p>Berikut adalah contoh inisialisasi aplikasi GTK4 sederhana di
+      <guid isPermaLink="true">https://fkp.my.id/blog/2026/04/wayland-rust-de</guid>
+      <description>Notes on my journey building a custom DE using the Rust, GTK-rs, and libadwaita ecosystem.</description>
+      <content:encoded><![CDATA[<p>Exploring the creation of a custom <em>Desktop Environment</em> (DE)
+running on the Wayland protocol is a very exciting challenge.</p>
+<p>I really love the interface of GNOME’s default applications, but for
+the desktop environment itself, I want something tailored specifically
+to my own workflow. Using <strong>Rust</strong> combined with
+<strong>GTK-rs</strong> and <code>libadwaita</code> provides a
+combination of performance, memory safety, and a modern interface
+look.</p>
+<h3 id="why-rust">Why Rust?</h3>
+<p>Rust’s built-in <em>memory safety</em> is crucial when dealing with
+low-level components like a Wayland <em>compositor</em>. We can avoid
+many of the <em>bugs</em> that frequently occur in C/C++.</p>
+<p>Here is an example of a simple GTK4 application initialization in
 Rust:</p>
-<pre class="rust"><code>use gtk::prelude::*;
-use gtk::{Application, ApplicationWindow};
-
-fn main() {
-    let app = Application::builder()
-        .application_id(&quot;id.my.fkp.wayland_de&quot;)
+<p>```rust use gtk::prelude::*; use gtk::{Application,
+ApplicationWindow};</p>
+<p>fn main() { let app = Application::builder()
+.application_id(“id.my.fkp.wayland_de”) .build();</p>
+<pre><code>app.connect_activate(|app| {
+    let window = ApplicationWindow::builder()
+        .application(app)
+        .title(&quot;My Custom DE&quot;)
+        .default_width(800)
+        .default_height(600)
         .build();
+    window.present();
+});
 
-    app.connect_activate(|app| {
-        let window = ApplicationWindow::builder()
-            .application(app)
-            .title(&quot;My Custom DE&quot;)
-            .default_width(800)
-            .default_height(600)
-            .build();
-        window.present();
-    });
-
-    app.run();
-}</code></pre>
-<p>Pada tulisan berikutnya, saya akan membahas bagaimana menghubungkan
-<em>window</em> ini dengan protokol Wayland!</p>]]></content:encoded>
-      <pubDate>Sun, 12 Apr 2026 00:00:00 +0000</pubDate>
+app.run();</code></pre>
+<p>}</p>]]></content:encoded>
+      <pubDate>Sun, 12 Apr 2026 00:00:00 +0700</pubDate>
       <dc:creator>Farhan Kurnia Pratama</dc:creator>
-    </item>    <item>
-      <title>Ide Bisnis Berbasis AI dengan Potensi Skala Besar</title>
-      <link>https://fkp.my.id/blog/2026/04/ide-bisnis-ai</link>
-      <guid
-        isPermaLink="true"
-      >https://fkp.my.id/blog/2026/04/ide-bisnis-ai</guid>
-      <description
-      >Mengeksplorasi beberapa model bisnis B2B menggunakan AI yang bisa menghasilkan pendapatan tinggi dan stabil.</description>
-      <content:encoded
-      ><![CDATA[<p>Pemanfaatan kecerdasan buatan (AI) tidak lagi sekadar tren, melainkan
-infrastruktur dasar untuk efisiensi bisnis modern. Membangun produk SaaS
-(Software as a Service) yang mengintegrasikan AI memiliki potensi
-skalabilitas yang luar biasa.</p>
-<p>Berikut adalah beberapa arsitektur bisnis yang sedang saya riset:</p>
+    </item>
+    <item>
+      <title>AI-Based Business Ideas with Massive Scale Potential</title>
+      <link>https://fkp.my.id/blog/2026/04/ai-business-ideas</link>
+      <guid isPermaLink="true">https://fkp.my.id/blog/2026/04/ai-business-ideas</guid>
+      <description>Exploring several B2B business models using AI that can generate high and stable income.</description>
+      <content:encoded><![CDATA[<p>The utilization of artificial intelligence (AI) is no longer just a
+trend, but rather a fundamental infrastructure for modern business
+efficiency. Building SaaS (Software as a Service) products that
+integrate AI has tremendous scalability potential.</p>
+<p>Here are a few business architectures I am currently researching:</p>
 <ol type="1">
-<li><p><strong>Otomatisasi Laporan Keuangan B2B</strong> Menggunakan LLM
-untuk mengekstrak dan menstandardisasi data dari ribuan faktur atau
-kuitansi tidak beraturan menjadi format yang siap diaudit.</p></li>
-<li><p><strong>Asisten Koding Spesifik Domain</strong> Berbeda dengan
-asisten koding umum, AI ini dilatih dengan repositori <em>codebase</em>
-internal perusahaan (<em>enterprise</em>) sehingga memahami arsitektur
-dan standar keamanan internal mereka.</p></li>
+<li><p><strong>B2B Financial Report Automation</strong> Using LLMs to
+extract and standardize data from thousands of irregular invoices or
+receipts into an audit-ready format.</p></li>
+<li><p><strong>Domain-Specific Coding Assistant</strong> Unlike general
+coding assistants, this AI is trained on an enterprise’s internal
+<em>codebase</em> repositories so it understands their internal
+architecture and security standards.</p></li>
 </ol>
-<p>Kunci dari ide-ide ini adalah fokus pada penyelesaian masalah
-spesifik yang bernilai tinggi (<em>high-ticket pain points</em>) bagi
-perusahaan, bukan sekadar membungkus <em>prompt</em> ChatGPT menjadi
-aplikasi biasa.</p>]]></content:encoded>
-      <pubDate>Thu, 02 Apr 2026 00:00:00 +0000</pubDate>
+<p>The key to these ideas is focusing on solving specific,
+<em>high-ticket pain points</em> for companies, rather than just
+wrapping a ChatGPT <em>prompt</em> into a regular application.</p>]]></content:encoded>
+      <pubDate>Thu, 02 Apr 2026 00:00:00 +0700</pubDate>
       <dc:creator>Farhan Kurnia Pratama</dc:creator>
     </item>
   </channel>

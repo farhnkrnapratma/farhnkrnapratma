@@ -85,9 +85,13 @@ xml_escape() {
 to_rfc822() {
   local raw="$1"
   if date --version &> /dev/null 2>&1; then
-    date -d "$raw" '+%a, %d %b %Y 00:00:00 +0000'
+    date -d "$raw" '+%a, %d %b %Y %H:%M:%S %z'
   else
-    date -jf '%Y-%m-%d' "$raw" '+%a, %d %b %Y 00:00:00 +0000'
+    if [[ "$raw" == *":"* ]]; then
+      date -jf '%Y-%m-%d %H:%M:%S' "$raw" '+%a, %d %b %Y %H:%M:%S %z'
+    else
+      date -jf '%Y-%m-%d' "$raw" '+%a, %d %b %Y 00:00:00 %z'
+    fi
   fi
 }
 
@@ -243,7 +247,7 @@ HTML
 
 rss_open() {
   local build_date
-  build_date=$(date '+%a, %d %b %Y %H:%M:%S +0000')
+  build_date=$(date '+%a, %d %b %Y %H:%M:%S %z')
 
   cat << XML
 <?xml version="1.0" encoding="UTF-8"?>
@@ -259,6 +263,15 @@ rss_open() {
     <copyright>$(xml_escape "$SITE_COPYRIGHT")</copyright>
     <lastBuildDate>${build_date}</lastBuildDate>
     <managingEditor>$(xml_escape "${SITE_EMAIL} (${SITE_AUTHOR})")</managingEditor>
+    <webMaster>$(xml_escape "${SITE_EMAIL} (${SITE_AUTHOR})")</webMaster>
+    <generator>shell script buatan saya sendiri</generator>
+    <docs>https://www.rssboard.org/rss-specification</docs>
+    <ttl>60</ttl>
+    <image>
+      <url>https://fkp.my.id/android-chrome-192x192.png</url>
+      <title>$(xml_escape "$SITE_TITLE")</title>
+      <link>${SITE_URL}/blog</link>
+    </image>
     <atom:link href="${SITE_URL}/rss.xml" rel="self" type="application/rss+xml" />
 XML
 }
@@ -330,8 +343,8 @@ main() {
 
   IFS=$'\n' read -r -d '' -a sorted_files < <(
     for f in "${!post_dates[@]}"; do
-      echo "${post_dates[$f]} $f"
-    done | sort -rk1 | awk '{print $2}' && printf '\0'
+      echo "${post_dates[$f]}|${f}"
+    done | sort -r -t'|' -k1 | awk -F'|' '{print $2}' && printf '\0'
   ) || true
 
   for file in "${sorted_files[@]}"; do
