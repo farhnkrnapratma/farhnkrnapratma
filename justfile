@@ -34,6 +34,9 @@ alias u := update
 [doc("Generate blog and RSS")]
 @generate:
   @./generate.sh
+  @just format
+  @just lint
+  @just check
 
 [doc("Install all packages")]
 @install:

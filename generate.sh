@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# -- Configuration -------------------------------------------------------------
-
 SITE_URL="https://fkp.my.id"
 SITE_TITLE="Farhan Kurnia Pratama | Blog"
 SITE_DESCRIPTION="The official blog website of Farhan Kurnia Pratama | Email: contact@fkp.my.id"
@@ -19,11 +17,8 @@ INDEX_FILE="${BLOG_DIR}/index.html"
 
 MAX_RSS_ITEMS=20
 
-# -- Dependency Check ----------------------------------------------------------
-
 check_deps() {
   local missing=()
-
   for cmd in pandoc sed awk date; do
     command -v "$cmd" &> /dev/null || missing+=("$cmd")
   done
@@ -35,8 +30,6 @@ check_deps() {
     exit 1
   fi
 }
-
-# -- Frontmatter Parsing -------------------------------------------------------
 
 get_frontmatter() {
   local key="$1"
@@ -61,8 +54,6 @@ get_body() {
     count >= 2 { print }
   ' "$file"
 }
-
-# -- Markdown Converter --------------------------------------------------------
 
 md_to_html() {
   local input="$1"
@@ -94,8 +85,6 @@ to_rfc822() {
     fi
   fi
 }
-
-# -- HTML Templates ------------------------------------------------------------
 
 html_post() {
   local title="$1"
@@ -244,8 +233,6 @@ html_index() {
 HTML
 }
 
-# -- RSS Builder ---------------------------------------------------------------
-
 rss_open() {
   local build_date
   build_date=$(date '+%a, %d %b %Y %H:%M:%S %z')
@@ -304,8 +291,6 @@ rss_close() {
 </rss>
 XML
 }
-
-# -- Main Build ----------------------------------------------------------------
 
 main() {
   check_deps
@@ -386,7 +371,9 @@ main() {
       "$html_content" \
       > "${post_dir}/index.html"
 
-    index_items+="<li><time datetime=\"${date}\">${date}</time> — <a href=\"./${post_year}/${post_month}/${slug}/\">${title}</a></li>\n"
+    local display_date="${date%% *}"
+    index_items+="<li><time datetime=\"${display_date}\">${display_date}</time> — <a href=\"./${post_year}/${post_month}/${slug}/\">${title}</a></li>\n"
+
     if ((rss_count < MAX_RSS_ITEMS)); then
       rss_items+=$(
         rss_item \
