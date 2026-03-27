@@ -1,3 +1,4 @@
+semi = false
 trailingComma = "none"
 experimentalTernaries = true
 experimentalOperatorPosition = "start"

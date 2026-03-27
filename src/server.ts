@@ -1,7 +1,7 @@
 /** @format */
 
-import Home from "./index.html";
-import Blog from "./blog/index.html";
+import Home from "./index.html"
+import Blog from "./blog/index.html"
 
 const server = Bun.serve({
   routes: {
@@ -9,8 +9,8 @@ const server = Bun.serve({
     "/blog": Blog
   },
   fetch() {
-    return new Response("404 Not Found!", { status: 404 });
+    return new Response("404 Not Found!", { status: 404 })
   }
-});
+})
 
-console.log(`Server running at http://localhost:${server.port}`);
+console.log(`Server running at http://localhost:${server.port}`)

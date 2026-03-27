@@ -40,6 +40,7 @@
           nativeBuildInputs = [
             pkgs.${system}.bun
             pkgs.${system}.nodejs_25
+            pkgs.${system}.pandoc
           ];
         };
       });

@@ -3,7 +3,6 @@
 
 # Mark generated files
 *.lock linguist-generated=true
-*.lock merge=ours
 
 # Binary files
 *.png binary
