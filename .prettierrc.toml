@@ -1,8 +1,2 @@
-semi = false
 trailingComma = "none"
-experimentalTernaries = true
-experimentalOperatorPosition = "start"
-bracketSameLine = true
-insertPragma = true
-checkIgnorePragma = true
 plugins = ["@prettier/plugin-xml", "prettier-plugin-sh", "prettier-plugin-toml"]

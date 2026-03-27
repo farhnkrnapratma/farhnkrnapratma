@@ -106,17 +106,15 @@ html_post() {
   local content="$5"
 
   cat << HTML
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" translate="no">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>${title} | ${SITE_TITLE}</title>
-
+  <title>${title} | ${SITE_AUTHOR}</title>
   <meta name="description" content="${description}" />
   <link rel="canonical" href="${url}" />
-
-  <meta property="og:title" content="${title} | ${SITE_TITLE}" />
+  <meta property="og:title" content="${title} | ${SITE_AUTHOR}" />
   <meta property="og:description" content="${description}" />
   <meta property="og:type" content="article" />
   <meta property="og:url" content="${url}" />
@@ -135,18 +133,15 @@ html_post() {
   <meta property="profile:gender" content="male" />
   <meta property="article:published_time" content="${date_str}" />
   <meta property="article:author" content="${SITE_AUTHOR}" />
-
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="${title} | ${SITE_TITLE}" />
+  <meta name="twitter:title" content="${title} | ${SITE_AUTHOR}" />
   <meta name="twitter:description" content="${description}" />
   <meta name="twitter:image" content="https://fkp.my.id/banner-blog.png" />
-
   <link rel="icon" href="../../../../assets/favicon.ico" />
   <link rel="apple-touch-icon" sizes="180x180" href="../../../../assets/apple-touch-icon.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="../../../../assets/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="../../../../assets/favicon-16x16.png" />
   <link rel="manifest" href="../../../../assets/site.webmanifest" />
-
   <link rel="alternate" type="application/rss+xml" title="${SITE_TITLE}" href="${SITE_URL}/rss.xml" />
   <link rel="stylesheet" href="tailwindcss" />
   <link rel="stylesheet" href="../../../../global.css" />
@@ -162,7 +157,7 @@ html_post() {
   <main class="md:col-start-2 col-start-auto row-start-2 pl-4 pr-4">
     <article>
       <header>
-        <h1>${title}</h1>
+        <div class="text-4xl">${title}</div>
         <time datetime="${date_str}">${date_str}</time>
       </header>
       <section>
@@ -185,16 +180,14 @@ html_index() {
   local items="$1"
 
   cat << HTML
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" translate="no">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>${SITE_TITLE}</title>
-
   <meta name="description" content="${SITE_DESCRIPTION}" />
   <link rel="canonical" href="${SITE_URL}/blog" />
-
   <meta property="og:title" content="${SITE_TITLE}" />
   <meta property="og:description" content="${SITE_DESCRIPTION}" />
   <meta property="og:type" content="website" />
@@ -212,18 +205,15 @@ html_index() {
   <meta property="profile:last_name" content="Pratama" />
   <meta property="profile:username" content="farhnkrnapratma" />
   <meta property="profile:gender" content="male" />
-
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="${SITE_TITLE}" />
   <meta name="twitter:description" content="${SITE_DESCRIPTION}" />
   <meta name="twitter:image" content="https://fkp.my.id/banner-blog.png" />
-
   <link rel="icon" href="../assets/favicon.ico" />
   <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16x16.png" />
   <link rel="manifest" href="../assets/site.webmanifest" />
-
   <link rel="alternate" type="application/rss+xml" title="${SITE_TITLE}" href="${SITE_URL}/rss.xml" />
   <link rel="stylesheet" href="tailwindcss" />
   <link rel="stylesheet" href="../global.css" />
@@ -237,7 +227,7 @@ html_index() {
     <a href="https://fkp.my.id/rss.xml" download>rss</a>
   </nav>
   <main class="md:col-start-2 col-start-auto row-start-2 pl-4 pr-4">
-    <h1>Blog</h1>
+    <div class="text-lg">Blog</div>
     <ul>
       ${items}
     </ul>
@@ -361,12 +351,10 @@ main() {
     description="${description:-}"
     slug="${slug:-$(basename "$file" .md)}"
 
-    # Ekstrak Tahun dan Bulan dari string tanggal (format: YYYY-MM-DD)
     local post_year=$(echo "$date" | cut -d'-' -f1)
     local post_month=$(echo "$date" | cut -d'-' -f2)
 
     local post_url="${SITE_URL}/blog/${post_year}/${post_month}/${slug}"
-    # Direktori target sekarang: src/blog/YYYY/MM/slug
     local post_dir="${BLOG_DIR}/${post_year}/${post_month}/${slug}"
     local body html_content
 
@@ -384,9 +372,7 @@ main() {
       "$html_content" \
       > "${post_dir}/index.html"
 
-    # Tautan di halaman daftar blog mengarah ke YYYY/MM/slug/
-    index_items+="<li><time datetime=\"${date}\">${date}</time> — <a href=\"${post_year}/${post_month}/${slug}/\">${title}</a></li>\n"
-
+    index_items+="<li><time datetime=\"${date}\">${date}</time> — <a href=\"./${post_year}/${post_month}/${slug}/index.html\">${title}</a></li>\n"
     if ((rss_count < MAX_RSS_ITEMS)); then
       local pub_date
       pub_date=$(to_rfc822 "$date")
@@ -399,7 +385,7 @@ main() {
           "$html_content" \
           "$SITE_AUTHOR"
       )
-      ((rss_count++))
+      rss_count=$((rss_count + 1))
     fi
   done
 

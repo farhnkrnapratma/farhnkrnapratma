@@ -1,10 +1,15 @@
-/** @format */
+import tailwind from "bun-plugin-tailwind";
+import { Glob } from "bun";
 
-import tailwind from "bun-plugin-tailwind"
+const glob = new Glob("**/*.html");
+
+const htmlEntrypoints = Array.from(glob.scanSync({ cwd: "./src" })).map(
+  (file) => `./src/${file}`
+);
 
 await Bun.build({
   publicPath: "https://fkp.my.id/",
-  entrypoints: ["./src/index.html", "./src/blog/index.html"],
+  entrypoints: htmlEntrypoints,
   outdir: "./build",
   naming: {
     asset: "[name].[ext]",
@@ -13,21 +18,22 @@ await Bun.build({
   },
   minify: true,
   plugins: [tailwind]
-})
+});
 
 await Bun.write(
   "./build/banner-home.png",
   Bun.file("./src/assets/banner-home.png")
-)
+);
 await Bun.write(
   "./build/banner-blog.png",
   Bun.file("./src/assets/banner-blog.png")
-)
+);
 await Bun.write(
   "./build/android-chrome-192x192.png",
   Bun.file("./src/assets/android-chrome-192x192.png")
-)
+);
 await Bun.write(
   "./build/android-chrome-512x512.png",
   Bun.file("./src/assets/android-chrome-512x512.png")
-)
+);
+await Bun.write("./build/rss.xml", Bun.file("./src/rss.xml"));

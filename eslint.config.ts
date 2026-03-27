@@ -1,8 +1,6 @@
-/** @format */
-
-import tseslint from "typescript-eslint"
-import { defineConfig } from "eslint/config"
-import eslintPluginPrettierRecommended from "eslint-plugin-prettier/recommended"
+import tseslint from "typescript-eslint";
+import { defineConfig } from "eslint/config";
+import eslintPluginPrettierRecommended from "eslint-plugin-prettier/recommended";
 
 export default defineConfig(
   ...tseslint.configs.recommended,
@@ -15,4 +13,4 @@ export default defineConfig(
     }
   },
   eslintPluginPrettierRecommended
-)
+);
