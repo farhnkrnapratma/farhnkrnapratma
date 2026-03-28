@@ -139,7 +139,7 @@ html_post() {
     <a href="https://fkp.my.id/#support">support</a>
     <a href="https://fkp.my.id/#contact">contact</a>
     <a href="/blog" class="link-active">blog</a>
-    <a href="https://fkp.my.id/rss.xml" download>rss</a>
+    <a href="https://fkp.my.id/rss.xml">rss</a>
   </nav>
   <main class="md:col-start-2 col-start-auto row-start-2 pl-4 pr-4">
     <article>
@@ -210,7 +210,7 @@ html_index() {
     <a href="https://fkp.my.id/#support">support</a>
     <a href="https://fkp.my.id/#contact">contact</a>
     <a href="/blog" class="link-active">blog</a>
-    <a href="https://fkp.my.id/rss.xml" download>rss</a>
+    <a href="https://fkp.my.id/rss.xml">rss</a>
   </nav>
   <main class="md:col-start-2 col-start-auto row-start-2 pl-4 pr-4">
     <h1>Blog</h1>
