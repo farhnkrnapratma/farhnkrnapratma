@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
-    <title>Farhan Kurnia Pratama | Blog</title>
+    <title>Technical Insights by Farhan Kurnia Pratama</title>
     <link>https://fkp.my.id/blog</link>
-    <description>The official blog website of Farhan Kurnia Pratama | Email: contact@fkp.my.id</description>
+    <description>Technical insights from a Software Engineer specializing in Linux/Unix and FOSS, exploring secure software design, system security, and digital privacy.</description>
     <language>en-US</language>
     <copyright>Copyright 2026 Farhan Kurnia Pratama</copyright>
-    <lastBuildDate>Sat, 28 Mar 2026 03:26:27 +0700</lastBuildDate>
+    <lastBuildDate>Sat, 28 Mar 2026 20:41:33 +0700</lastBuildDate>
     <managingEditor>contact@fkp.my.id (Farhan Kurnia Pratama)</managingEditor>
     <webMaster>contact@fkp.my.id (Farhan Kurnia Pratama)</webMaster>
     <generator>Bash Script (https://github.com/farhnkrnapratma/farhnkrnapratma/generate.sh)</generator>
@@ -14,14 +14,39 @@
     <ttl>60</ttl>
     <image>
       <url>https://fkp.my.id/android-chrome-192x192.png</url>
-      <title>Farhan Kurnia Pratama | Blog</title>
+      <title>Technical Insights by Farhan Kurnia Pratama</title>
       <link>https://fkp.my.id/blog</link>
     </image>
     <atom:link href="https://fkp.my.id/rss.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>AI-Based Business Ideas with Massive Scale Potential</title>
+      <link>https://fkp.my.id/blog/2026/04/ai-business-ideas</link>
+      <guid isPermaLink="true">https://fkp.my.id/blog/2026/04/ai-business-ideas</guid>
+      <description>Exploring several B2B business models using AI that can generate high and stable income.</description>
+      <content:encoded><![CDATA[<p>The utilization of artificial intelligence (AI) is no longer just a
+trend, but rather a fundamental infrastructure for modern business
+efficiency. Building SaaS (Software as a Service) products that
+integrate AI has tremendous scalability potential.</p>
+<p>Here are a few business architectures I am currently researching:</p>
+<ol type="1">
+<li><p><strong>B2B Financial Report Automation</strong> Using LLMs to
+extract and standardize data from thousands of irregular invoices or
+receipts into an audit-ready format.</p></li>
+<li><p><strong>Domain-Specific Coding Assistant</strong> Unlike general
+coding assistants, this AI is trained on an enterprise’s internal
+<em>codebase</em> repositories so it understands their internal
+architecture and security standards.</p></li>
+</ol>
+<p>The key to these ideas is focusing on solving specific,
+<em>high-ticket pain points</em> for companies, rather than just
+wrapping a ChatGPT <em>prompt</em> into a regular application.</p>]]></content:encoded>
+      <pubDate>Thu, 02 Apr 2026 14:30:00 +0700</pubDate>
+      <dc:creator>Farhan Kurnia Pratama</dc:creator>
+    </item>
+    <item>
       <title>Building a Wayland Desktop Environment with Rust and GTK4</title>
-      <link>https://fkp.my.id/blog/2026/04/wayland-rust-de</link>
-      <guid isPermaLink="true">https://fkp.my.id/blog/2026/04/wayland-rust-de</guid>
+      <link>https://fkp.my.id/blog/2026/01/wayland-rust-de</link>
+      <guid isPermaLink="true">https://fkp.my.id/blog/2026/01/wayland-rust-de</guid>
       <description>Notes on my journey building a custom DE using the Rust, GTK-rs, and libadwaita ecosystem.</description>
       <content:encoded><![CDATA[<p>Exploring the creation of a custom <em>Desktop Environment</em> (DE)
 running on the Wayland protocol is a very exciting challenge.</p>
@@ -57,32 +82,7 @@ fn main() {
 
     app.run();
 }</code></pre>]]></content:encoded>
-      <pubDate>Sun, 12 Apr 2026 09:23:00 +0700</pubDate>
-      <dc:creator>Farhan Kurnia Pratama</dc:creator>
-    </item>
-    <item>
-      <title>AI-Based Business Ideas with Massive Scale Potential</title>
-      <link>https://fkp.my.id/blog/2026/04/ai-business-ideas</link>
-      <guid isPermaLink="true">https://fkp.my.id/blog/2026/04/ai-business-ideas</guid>
-      <description>Exploring several B2B business models using AI that can generate high and stable income.</description>
-      <content:encoded><![CDATA[<p>The utilization of artificial intelligence (AI) is no longer just a
-trend, but rather a fundamental infrastructure for modern business
-efficiency. Building SaaS (Software as a Service) products that
-integrate AI has tremendous scalability potential.</p>
-<p>Here are a few business architectures I am currently researching:</p>
-<ol type="1">
-<li><p><strong>B2B Financial Report Automation</strong> Using LLMs to
-extract and standardize data from thousands of irregular invoices or
-receipts into an audit-ready format.</p></li>
-<li><p><strong>Domain-Specific Coding Assistant</strong> Unlike general
-coding assistants, this AI is trained on an enterprise’s internal
-<em>codebase</em> repositories so it understands their internal
-architecture and security standards.</p></li>
-</ol>
-<p>The key to these ideas is focusing on solving specific,
-<em>high-ticket pain points</em> for companies, rather than just
-wrapping a ChatGPT <em>prompt</em> into a regular application.</p>]]></content:encoded>
-      <pubDate>Thu, 02 Apr 2026 14:30:00 +0700</pubDate>
+      <pubDate>Mon, 12 Jan 2026 09:23:00 +0700</pubDate>
       <dc:creator>Farhan Kurnia Pratama</dc:creator>
     </item>
   </channel>

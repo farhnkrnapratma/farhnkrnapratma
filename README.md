@@ -5,9 +5,9 @@
 ![Commit Activity](https://img.shields.io/github/commit-activity/w/farhnkrnapratma/farhnkrnapratma?logo=github&label=Commit%20Activity)
 ![Last Commit](https://img.shields.io/github/last-commit/farhnkrnapratma/farhnkrnapratma?logo=github&label=Last%20Commit) [^1]
 
-I'm a **tech enthusiast** with a strong focus on **Linux**, **Unix-like OS**,
+I'm a **tech enthusiast** with a strong focus on **Linux and Unix-like OS**,
 **Free and Open-Source Software (FOSS)**, and **software engineering**.
-I'm passionate about building _reliable_ and _maintainable_ systems.
+I'm passionate about building *reliable* and *maintainable* systems.
 I actively explore open-source projects and occasionally contribute when I can.
 Beyond that, I'm deeply interested in **cybersecurity**,
 particularly system security, privacy, and secure software design.

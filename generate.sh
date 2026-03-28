@@ -2,14 +2,14 @@
 set -euo pipefail
 
 SITE_URL="https://fkp.my.id"
-SITE_TITLE="Farhan Kurnia Pratama | Blog"
-SITE_DESCRIPTION="The official blog website of Farhan Kurnia Pratama | Email: contact@fkp.my.id"
 SITE_AUTHOR="Farhan Kurnia Pratama"
 SITE_EMAIL="contact@fkp.my.id"
+SITE_TITLE="Technical Insights by ${SITE_AUTHOR}"
+SITE_DESCRIPTION="Technical insights from a Software Engineer specializing in Linux/Unix and FOSS, exploring secure software design, system security, and digital privacy."
 SITE_LANGUAGE="en-US"
-SITE_COPYRIGHT="Copyright $(date +%Y) Farhan Kurnia Pratama"
+SITE_COPYRIGHT="Copyright $(date +%Y) ${SITE_AUTHOR}"
 
-SRC_DIR="./src/blog/write"
+SRC_DIR="./src/blog/template"
 OUTPUT_DIR="./src"
 BLOG_DIR="${OUTPUT_DIR}/blog"
 RSS_FILE="${OUTPUT_DIR}/rss.xml"
@@ -20,13 +20,13 @@ MAX_RSS_ITEMS=20
 check_deps() {
   local missing=()
   for cmd in pandoc sed awk date; do
-    command -v "$cmd" &> /dev/null || missing+=("$cmd")
+    command -v "$cmd" &>/dev/null || missing+=("$cmd")
   done
 
   if [[ ${#missing[@]} -gt 0 ]]; then
     echo "[ERROR] Missing required tools: ${missing[*]}" >&2
-    [[ " ${missing[*]} " == *" pandoc "* ]] \
-      && echo "[ERROR] Install pandoc: https://pandoc.org/installing.html" >&2
+    [[ " ${missing[*]} " == *" pandoc "* ]] &&
+      echo "[ERROR] Install pandoc: https://pandoc.org/installing.html" >&2
     exit 1
   fi
 }
@@ -64,8 +64,8 @@ md_to_html() {
 }
 
 xml_escape() {
-  echo "$1" \
-    | sed \
+  echo "$1" |
+    sed \
       -e 's/&/\&amp;/g' \
       -e 's/</\&lt;/g' \
       -e 's/>/\&gt;/g' \
@@ -75,7 +75,7 @@ xml_escape() {
 
 to_rfc822() {
   local raw="$1"
-  if date --version &> /dev/null 2>&1; then
+  if date --version &>/dev/null 2>&1; then
     date -d "$raw" '+%a, %d %b %Y %H:%M:%S %z'
   else
     if [[ "$raw" == *":"* ]]; then
@@ -94,26 +94,26 @@ html_post() {
   local url="$5"
   local content="$6"
 
-  cat << HTML
+  cat <<HTML
 <!doctype html>
 <html lang="en" translate="no">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>${title} | ${SITE_AUTHOR}</title>
+  <title>${title} - ${SITE_TITLE}</title>
   <meta name="description" content="${description}" />
   <link rel="canonical" href="${url}" />
-  <meta property="og:title" content="${title} | ${SITE_AUTHOR}" />
+  <meta property="og:title" content="${title} - ${SITE_TITLE}" />
   <meta property="og:description" content="${description}" />
   <meta property="og:type" content="article" />
   <meta property="og:url" content="${url}" />
   <meta property="og:site_name" content="fkp.my.id" />
-  <meta property="og:image" content="https://fkp.my.id/banner-blog.png" />
-  <meta property="og:image:secure_url" content="https://fkp.my.id/banner-blog.png" />
+  <meta property="og:image" content="https://fkp.my.id/asset/banner-blog.png" />
+  <meta property="og:image:secure_url" content="https://fkp.my.id/asset/banner-blog.png" />
   <meta property="og:image:type" content="image/png" />
   <meta property="og:image:width" content="1280" />
   <meta property="og:image:height" content="640" />
-  <meta property="og:image:alt" content="Banner for Farhan Kurnia Pratama Official Website" />
+  <meta property="og:image:alt" content="Technical Insights by Farhan Kurnia Pratama - Exploring Linux/Unix, FOSS, secure software design, and digital privacy." />
   <meta property="og:locale" content="en_US" />
   <meta property="og:locale:alternate" content="id_ID" />
   <meta property="profile:first_name" content="Farhan Kurnia" />
@@ -123,15 +123,13 @@ html_post() {
   <meta property="article:published_time" content="${date_str}" />
   <meta property="article:author" content="${SITE_AUTHOR}" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="${title} | ${SITE_AUTHOR}" />
+  <meta name="twitter:title" content="${title} - ${SITE_TITLE}" />
   <meta name="twitter:description" content="${description}" />
-  <meta name="twitter:image" content="https://fkp.my.id/banner-blog.png" />
-  <link rel="icon" href="../../../../assets/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="../../../../assets/apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="../../../../assets/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="../../../../assets/favicon-16x16.png" />
-  <link rel="manifest" href="../../../../assets/site.webmanifest" />
-  <link rel="alternate" type="application/rss+xml" title="${SITE_TITLE}" href="${SITE_URL}/rss.xml" />
+  <meta name="twitter:image" content="https://fkp.my.id/asset/banner-blog.png" />
+  <link rel="icon" href="../../../../asset/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../../../../asset/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../../../../asset/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="../../../../asset/favicon-16x16.png" />
   <link rel="stylesheet" href="tailwindcss" />
   <link rel="stylesheet" href="../../../../global.css" />
 </head>
@@ -147,9 +145,8 @@ html_post() {
     <article>
       <header>
         <time datetime="${date_str}">${date_rfc}</time>
-        <div class="text-4xl">${title}</div>
+        <h1>${title}</h1>
       </header>
-      <br />
       <section>
         ${content}
       </section>
@@ -169,7 +166,7 @@ HTML
 html_index() {
   local items="$1"
 
-  cat << HTML
+  cat <<HTML
 <!doctype html>
 <html lang="en" translate="no">
 <head>
@@ -183,12 +180,12 @@ html_index() {
   <meta property="og:type" content="website" />
   <meta property="og:url" content="${SITE_URL}/blog" />
   <meta property="og:site_name" content="fkp.my.id" />
-  <meta property="og:image" content="https://fkp.my.id/banner-blog.png" />
-  <meta property="og:image:secure_url" content="https://fkp.my.id/banner-blog.png" />
+  <meta property="og:image" content="https://fkp.my.id/asset/banner-blog.png" />
+  <meta property="og:image:secure_url" content="https://fkp.my.id/asset/banner-blog.png" />
   <meta property="og:image:type" content="image/png" />
   <meta property="og:image:width" content="1280" />
   <meta property="og:image:height" content="640" />
-  <meta property="og:image:alt" content="Banner for Farhan Kurnia Pratama Official Website" />
+  <meta property="og:image:alt" content="Technical Insights by Farhan Kurnia Pratama - Exploring Linux/Unix, FOSS, secure software design, and digital privacy." />
   <meta property="og:locale" content="en_US" />
   <meta property="og:locale:alternate" content="id_ID" />
   <meta property="profile:first_name" content="Farhan Kurnia" />
@@ -198,12 +195,11 @@ html_index() {
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="${SITE_TITLE}" />
   <meta name="twitter:description" content="${SITE_DESCRIPTION}" />
-  <meta name="twitter:image" content="https://fkp.my.id/banner-blog.png" />
-  <link rel="icon" href="../assets/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16x16.png" />
-  <link rel="manifest" href="../assets/site.webmanifest" />
+  <meta name="twitter:image" content="https://fkp.my.id/asset/banner-blog.png" />
+  <link rel="icon" href="../asset/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../asset/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../asset/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="../asset/favicon-16x16.png" />
   <link rel="alternate" type="application/rss+xml" title="${SITE_TITLE}" href="${SITE_URL}/rss.xml" />
   <link rel="stylesheet" href="tailwindcss" />
   <link rel="stylesheet" href="../global.css" />
@@ -217,7 +213,7 @@ html_index() {
     <a href="https://fkp.my.id/rss.xml" download>rss</a>
   </nav>
   <main class="md:col-start-2 col-start-auto row-start-2 pl-4 pr-4">
-    <div class="text-4xl">Blog</div> <br />
+    <h1>Blog</h1>
     <ul>
       ${items}
     </ul>
@@ -237,7 +233,7 @@ rss_open() {
   local build_date
   build_date=$(date '+%a, %d %b %Y %H:%M:%S %z')
 
-  cat << XML
+  cat <<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0"
   xmlns:atom="http://www.w3.org/2005/Atom"
@@ -272,7 +268,7 @@ rss_item() {
   local content="$5"
   local author="$6"
 
-  cat << XML
+  cat <<XML
     <item>
       <title>$(xml_escape "$title")</title>
       <link>${url}</link>
@@ -286,7 +282,7 @@ XML
 }
 
 rss_close() {
-  cat << XML
+  cat <<XML
   </channel>
 </rss>
 XML
@@ -334,7 +330,7 @@ main() {
   ) || true
 
   for file in "${sorted_files[@]}"; do
-    local title date description slug
+    local title date description slug post_year post_month
 
     title=$(get_frontmatter "title" "$file")
     date=$(get_frontmatter "date" "$file")
@@ -346,8 +342,8 @@ main() {
     description="${description:-}"
     slug="${slug:-$(basename "$file" .md)}"
 
-    local post_year=$(echo "$date" | cut -d'-' -f1)
-    local post_month=$(echo "$date" | cut -d'-' -f2)
+    post_year=$(echo "$date" | cut -d'-' -f1)
+    post_month=$(echo "$date" | cut -d'-' -f2)
 
     local post_url="${SITE_URL}/blog/${post_year}/${post_month}/${slug}"
     local post_dir="${BLOG_DIR}/${post_year}/${post_month}/${slug}"
@@ -369,7 +365,7 @@ main() {
       "$description" \
       "$post_url" \
       "$html_content" \
-      > "${post_dir}/index.html"
+      >"${post_dir}/index.html"
 
     local display_date="${date%% *}"
     index_items+="<li><time datetime=\"${display_date}\">${display_date}</time> — <a href=\"./${post_year}/${post_month}/${slug}/\">${title}</a></li>\n"
@@ -393,10 +389,10 @@ main() {
     rss_open
     echo "$rss_items"
     rss_close
-  } > "$RSS_FILE"
+  } >"$RSS_FILE"
 
   echo "[INFO] Generating blog index -> ${INDEX_FILE}"
-  html_index "$(echo -e "$index_items")" > "$INDEX_FILE"
+  html_index "$(echo -e "$index_items")" >"$INDEX_FILE"
 
   echo ""
   echo "[DONE] ${#sorted_files[@]} post(s) built successfully"

@@ -8,11 +8,10 @@ const htmlEntrypoints = Array.from(glob.scanSync({ cwd: './src' })).map(
 )
 
 await Bun.build({
-  publicPath: 'https://fkp.my.id/',
   entrypoints: htmlEntrypoints,
   outdir: './build',
   naming: {
-    asset: '[name].[ext]',
+    asset: '[dir]/[name].[ext]',
     entry: '[dir]/[name].[ext]',
     chunk: '[dir]/[name].[ext]',
   },
@@ -21,19 +20,19 @@ await Bun.build({
 })
 
 await Bun.write(
-  './build/banner-home.png',
-  Bun.file('./src/assets/banner-home.png'),
+  './build/asset/banner-home.png',
+  Bun.file('./src/asset/banner-home.png'),
 )
 await Bun.write(
-  './build/banner-blog.png',
-  Bun.file('./src/assets/banner-blog.png'),
+  './build/asset/banner-blog.png',
+  Bun.file('./src/asset/banner-blog.png'),
 )
 await Bun.write(
-  './build/android-chrome-192x192.png',
-  Bun.file('./src/assets/android-chrome-192x192.png'),
+  './build/asset/android-chrome-192x192.png',
+  Bun.file('./src/asset/android-chrome-192x192.png'),
 )
 await Bun.write(
-  './build/android-chrome-512x512.png',
-  Bun.file('./src/assets/android-chrome-512x512.png'),
+  './build/asset/android-chrome-512x512.png',
+  Bun.file('./src/asset/android-chrome-512x512.png'),
 )
 await Bun.write('./build/rss.xml', Bun.file('./src/rss.xml'))

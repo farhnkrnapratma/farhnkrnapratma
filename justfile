@@ -11,6 +11,13 @@ alias l := lint
 alias s := serve
 alias u := update
 
+[doc("Define default action")]
+@default:
+  @just clean
+  @just audit
+  @just update
+  @just generate
+
 [doc("Audit all packages")]
 @audit:
   @bun audit
@@ -22,6 +29,8 @@ alias u := update
 [doc("Remove build directory")]
 @clean:
   @rm -rf ./build
+  @rm -rf ./src/rss.xml
+  @rm -rf ./src/blog/{2026,index.html}
 
 @check:
   @bunx --bun @biomejs/biome check --write --verbose
@@ -29,7 +38,8 @@ alias u := update
 [doc("Format this project")]
 @format:
   @bunx --bun @biomejs/biome format --write --verbose
-  @xq -i src/rss.xml
+  @shfmt --write ./generate.sh
+  @xq -i ./src/rss.xml
 
 [doc("Generate blog and RSS")]
 @generate:
@@ -45,6 +55,7 @@ alias u := update
 [doc("Lint this project")]
 @lint:
   @bunx --bun @biomejs/biome lint --write --verbose
+  @shellcheck ./generate.sh
 
 [doc("Start development server")]
 @serve:

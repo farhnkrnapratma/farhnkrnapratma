@@ -1,6 +1,6 @@
 ---
 title: "Building a Wayland Desktop Environment with Rust and GTK4"
-date: 2026-04-12 09:23:00
+date: 2026-01-12 09:23:00
 description: "Notes on my journey building a custom DE using the Rust, GTK-rs, and libadwaita ecosystem."
 slug: wayland-rust-de
 ---

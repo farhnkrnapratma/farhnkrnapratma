@@ -42,6 +42,8 @@
             pkgs.${system}.nodejs_25
             pkgs.${system}.pandoc
             pkgs.${system}.xq-xml
+            pkgs.${system}.shfmt
+            pkgs.${system}.shellcheck
           ];
         };
       });
