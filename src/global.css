@@ -1,12 +1,27 @@
-@import url("https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&display=swap");
+@import url("https://api.fontshare.com/v2/css?f[]=sentient@1,2&f[]=satoshi@1,2&f[]=jet-brains-mono@1,2&display=swap");
 @import "tailwindcss";
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  h1 {
+    @apply text-4xl font-medium font-sentient;
+  }
+}
+
 body {
-  @apply font-["Google_Sans_Code"] scroll-smooth;
+  @apply font-satoshi scroll-smooth;
+}
+
+@utility font-satoshi {
+  @apply font-["Satoshi"];
+  font-feature-settings: "ss03" 1;
+}
+
+@utility font-sentient {
+  @apply font-["Sentient"];
 }
 
 @utility link-active {

@@ -130,16 +130,16 @@ html_post() {
   <link rel="apple-touch-icon" sizes="180x180" href="../../../../asset/apple-touch-icon.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="../../../../asset/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="../../../../asset/favicon-16x16.png" />
-  <link rel="stylesheet" href="tailwindcss" />
+  <link rel="alternate" type="application/rss+xml" title="${SITE_TITLE}" href="${SITE_URL}/rss.xml" />
   <link rel="stylesheet" href="../../../../global.css" />
 </head>
 <body class="grid md:grid-cols-[25vw_50vw_25vw] gird-cols-1 grid-rows-[10vh_auto_10vh] bg-gvd-fg0 text-gvd-bg1 dark:bg-gvd-bg dark:text-gvd-fg1">
   <nav class="md:col-start-2 col-start-auto row-start-1 w-full h-full gap-[1.5vw] inline-flex items-center justify-center font-thin *:link-hover *:pl-[1vw] *:pr-[1vw]">
     <a href="/">home</a>
-    <a href="https://fkp.my.id/#support">support</a>
-    <a href="https://fkp.my.id/#contact">contact</a>
+    <a href="/#support">support</a>
+    <a href="/#contact">contact</a>
     <a href="/blog" class="link-active">blog</a>
-    <a href="https://fkp.my.id/rss.xml">rss</a>
+    <a href="/rss.xml">rss</a>
   </nav>
   <main class="md:col-start-2 col-start-auto row-start-2 pl-4 pr-4">
     <article>
@@ -201,16 +201,15 @@ html_index() {
   <link rel="icon" type="image/png" sizes="32x32" href="../asset/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="../asset/favicon-16x16.png" />
   <link rel="alternate" type="application/rss+xml" title="${SITE_TITLE}" href="${SITE_URL}/rss.xml" />
-  <link rel="stylesheet" href="tailwindcss" />
   <link rel="stylesheet" href="../global.css" />
 </head>
 <body class="grid md:grid-cols-[25vw_50vw_25vw] gird-cols-1 grid-rows-[10vh_auto_10vh] bg-gvd-fg0 text-gvd-bg1 dark:bg-gvd-bg dark:text-gvd-fg1">
   <nav class="md:col-start-2 col-start-auto row-start-1 w-full h-full gap-[1.5vw] inline-flex items-center justify-center font-thin *:link-hover *:pl-[1vw] *:pr-[1vw]">
     <a href="/">home</a>
-    <a href="https://fkp.my.id/#support">support</a>
-    <a href="https://fkp.my.id/#contact">contact</a>
+    <a href="/#support">support</a>
+    <a href="/#contact">contact</a>
     <a href="/blog" class="link-active">blog</a>
-    <a href="https://fkp.my.id/rss.xml">rss</a>
+    <a href="/rss.xml">rss</a>
   </nav>
   <main class="md:col-start-2 col-start-auto row-start-2 pl-4 pr-4">
     <h1>Blog</h1>

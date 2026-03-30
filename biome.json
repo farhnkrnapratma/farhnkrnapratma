@@ -21,11 +21,11 @@
     "formatter": {
       "jsxQuoteStyle": "double",
       "quoteProperties": "asNeeded",
-      "trailingCommas": "all",
+      "trailingCommas": "none",
       "semicolons": "asNeeded",
       "arrowParentheses": "always",
       "bracketSameLine": false,
-      "quoteStyle": "single",
+      "quoteStyle": "double",
       "attributePosition": "auto",
       "bracketSpacing": true
     }

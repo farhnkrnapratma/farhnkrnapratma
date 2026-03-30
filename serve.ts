@@ -1,14 +1,16 @@
-import Blog from './src/blog/index.html'
-import Home from './src/index.html'
+import NotFound from "./src/404.html"
+import Blog from "./src/blog/index.html"
+import Home from "./src/index.html"
 
 const server = Bun.serve({
   routes: {
-    '/': Home,
-    '/blog': Blog,
+    "/": Home,
+    "/blog": Blog,
+    "/404": NotFound
   },
   fetch() {
-    return new Response('404 Not Found', { status: 404 })
-  },
+    return Response.redirect("/404")
+  }
 })
 
 console.log(`Server running at http://localhost:${server.port}`)
